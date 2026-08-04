@@ -6,14 +6,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>DALZON SHULE - Connecter l'École à la Maison</title>
+<title>DALZON SHULE | Connecter l'École à la Maison</title>
+
+
+<!-- Bibliothèque des vraies icônes -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 
 <style>
-
-/* =========================
-   RESET
-========================= */
 
 *{
 margin:0;
@@ -23,63 +23,52 @@ font-family:Arial, Helvetica, sans-serif;
 }
 
 
+html{
+scroll-behavior:smooth;
+}
+
+
 body{
-color:#101828;
 background:#fff;
+color:#101828;
 overflow-x:hidden;
 }
 
 
 :root{
-
 --blue:#155EEF;
 --green:#12B76A;
 --dark:#101828;
 --gray:#667085;
---light:#F5F8FF;
-
 }
 
 
-
-/* =========================
-HEADER
-========================= */
-
+/* HEADER */
 
 header{
 
 position:fixed;
 top:0;
 left:0;
-
 width:100%;
-height:78px;
-
-background:rgba(255,255,255,.96);
-
-box-shadow:0 5px 25px rgba(0,0,0,.08);
-
+height:80px;
+background:rgba(255,255,255,0.92);
+backdrop-filter:blur(15px);
 z-index:1000;
+box-shadow:0 5px 25px rgba(0,0,0,.08);
 
 }
 
 
-
 .navbar{
 
-max-width:1200px;
-
+max-width:1250px;
 height:100%;
-
 margin:auto;
-
 padding:0 25px;
 
 display:flex;
-
 align-items:center;
-
 justify-content:space-between;
 
 }
@@ -89,13 +78,10 @@ justify-content:space-between;
 .logo{
 
 font-size:28px;
-
 font-weight:900;
-
 color:var(--blue);
 
 }
-
 
 
 .logo span{
@@ -106,37 +92,51 @@ color:var(--green);
 
 
 
-
-.nav-menu{
+.menu{
 
 display:flex;
-
-gap:35px;
-
+gap:30px;
 list-style:none;
+align-items:center;
 
 }
 
 
-
-.nav-menu a{
+.menu a{
 
 text-decoration:none;
-
+color:#344054;
 font-weight:700;
 
-color:#344054;
+}
+
+
+.download{
+
+background:var(--blue);
+color:white!important;
+padding:14px 25px;
+border-radius:14px;
 
 }
 
 
 
-.menu-icon{
+.login{
+
+border:2px solid var(--blue);
+padding:12px 22px;
+border-radius:14px;
+color:var(--blue)!important;
+
+}
+
+
+
+.menu-btn{
 
 display:none;
-
 font-size:30px;
-
 cursor:pointer;
 
 }
@@ -144,22 +144,17 @@ cursor:pointer;
 
 
 
-/* =========================
-HERO
-========================= */
+
+/* HERO */
 
 
 .hero{
 
-padding:150px 8% 80px;
+padding:160px 8% 100px;
 
 background:
 
-linear-gradient(
-120deg,
-#ffffff,
-#F0F6FF
-);
+radial-gradient(circle at top right,#DDE9FF,transparent 40%);
 
 }
 
@@ -167,17 +162,13 @@ linear-gradient(
 
 .hero-container{
 
-max-width:1200px;
-
+max-width:1250px;
 margin:auto;
 
 display:grid;
-
 grid-template-columns:1fr 1fr;
-
+gap:70px;
 align-items:center;
-
-gap:60px;
 
 }
 
@@ -186,10 +177,8 @@ gap:60px;
 
 .hero h1{
 
-font-size:clamp(40px,6vw,65px);
-
-line-height:1.1;
-
+font-size:clamp(40px,6vw,70px);
+line-height:1.05;
 font-weight:900;
 
 }
@@ -204,64 +193,58 @@ color:var(--blue);
 
 
 
+
 .hero p{
 
-margin-top:25px;
-
 font-size:19px;
-
 line-height:32px;
-
 color:var(--gray);
+margin:25px 0;
 
 }
 
 
 
-.hero-buttons{
 
-margin-top:35px;
+.actions{
 
 display:flex;
-
 gap:20px;
-
 flex-wrap:wrap;
 
 }
 
 
 
+
 .btn{
 
-padding:16px 30px;
-
+padding:17px 30px;
 border-radius:15px;
-
+text-decoration:none;
 font-weight:800;
 
-text-decoration:none;
-
-display:inline-block;
+display:flex;
+align-items:center;
+gap:10px;
 
 }
 
 
 
-.btn-primary{
+
+.primary{
 
 background:var(--blue);
-
 color:white;
 
 }
 
 
 
-.btn-outline{
+.secondary{
 
 border:2px solid var(--blue);
-
 color:var(--blue);
 
 }
@@ -271,36 +254,27 @@ color:var(--blue);
 
 
 
-/* =========================
-APP PREVIEW
-========================= */
+/* APERCU APPLICATION */
 
 
-.app-showcase{
+.application{
 
 background:white;
-
+padding:30px;
 border-radius:35px;
 
-padding:35px;
-
 box-shadow:
-
-0 25px 60px rgba(0,0,0,.12);
+0 30px 80px rgba(0,0,0,.15);
 
 }
 
 
 
-.app-header{
+.application-header{
 
 display:flex;
-
 align-items:center;
-
-gap:15px;
-
-margin-bottom:30px;
+gap:20px;
 
 }
 
@@ -308,115 +282,58 @@ margin-bottom:30px;
 
 .app-logo{
 
-width:60px;
+width:75px;
+height:75px;
+border-radius:22px;
 
-height:60px;
-
-border-radius:18px;
-
-background:var(--blue);
+background:linear-gradient(
+135deg,
+#155EEF,
+#12B76A
+);
 
 display:flex;
-
 align-items:center;
-
 justify-content:center;
 
-}
-
-
-
-.app-logo svg{
-
-width:35px;
-
-fill:white;
+color:white;
+font-size:32px;
+font-weight:900;
 
 }
 
 
 
-.app-header h2{
+.application h2{
 
-font-size:25px;
-
-}
-
-
-
-.dashboard{
-
-display:grid;
-
-gap:15px;
+font-size:30px;
 
 }
 
 
 
-.dashboard-card{
 
-background:#F2F4F7;
+.app-card{
 
+margin-top:25px;
 padding:20px;
+
+background:#F9FAFB;
 
 border-radius:20px;
 
 display:flex;
-
 align-items:center;
-
 gap:15px;
 
 }
 
 
 
-.dashboard-icon{
+.app-card i{
 
-width:45px;
-
-height:45px;
-
-background:#EAF2FF;
-
-border-radius:12px;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-}
-
-
-
-.dashboard-icon svg{
-
-width:24px;
-
-fill:var(--blue);
-
-}
-
-
-
-.dashboard-card h3{
-
-font-size:16px;
-
-}
-
-
-
-.dashboard-card p{
-
-font-size:13px;
-
-color:var(--gray);
-
-margin-top:5px;
+font-size:25px;
+color:var(--blue);
 
 }
 
@@ -424,42 +341,35 @@ margin-top:5px;
 
 
 
-/* =========================
-MOBILE
-========================= */
+/* MOBILE */
 
 
 @media(max-width:850px){
 
 
-.nav-menu{
+.menu{
 
 position:fixed;
-
-top:78px;
-
+top:80px;
 right:-100%;
 
+width:85%;
 height:100vh;
-
-width:80%;
 
 background:white;
 
-display:flex;
-
 flex-direction:column;
+align-items:flex-start;
 
 padding:40px;
 
-transition:.3s;
-
-box-shadow:-10px 0 30px rgba(0,0,0,.1);
+transition:.4s;
 
 }
 
 
-.nav-menu.active{
+
+.menu.active{
 
 right:0;
 
@@ -467,7 +377,7 @@ right:0;
 
 
 
-.menu-icon{
+.menu-btn{
 
 display:block;
 
@@ -478,39 +388,34 @@ display:block;
 .hero-container{
 
 grid-template-columns:1fr;
-
 text-align:center;
 
 }
 
 
-
-.hero-buttons{
+.actions{
 
 justify-content:center;
 
 }
 
 
-
-.app-showcase{
+.application{
 
 margin-top:30px;
 
 }
 
 
-
 }
-
 
 </style>
 
 </head>
 
 
-
 <body>
+
 
 
 <header>
@@ -527,29 +432,61 @@ DALZON <span>SHULE</span>
 
 
 
-<ul class="nav-menu" id="menu">
 
-<li><a href="#">Accueil</a></li>
+<ul class="menu" id="menu">
 
-<li><a href="#">Solutions</a></li>
 
-<li><a href="#">Fonctionnalités</a></li>
+<li>
+<a href="#accueil">
+Accueil
+</a>
+</li>
 
-<li><a href="#">Contact</a></li>
+
+<li>
+<a href="#fonctionnalites">
+Fonctionnalités
+</a>
+</li>
+
+
+
+<li>
+<a href="#connexion" class="login">
+
+<i class="fa-solid fa-user-lock"></i>
+
+Connexion
+
+</a>
+</li>
+
+
+
+<li>
+<a href="#telecharger" class="download">
+
+<i class="fa-solid fa-download"></i>
+
+Télécharger
+
+</a>
+</li>
+
 
 </ul>
 
 
 
-<div class="menu-icon" id="menuBtn">
+<div class="menu-btn" id="menuBtn">
 
-☰
+<i class="fa-solid fa-bars"></i>
 
 </div>
 
 
-</nav>
 
+</nav>
 
 </header>
 
@@ -557,7 +494,9 @@ DALZON <span>SHULE</span>
 
 
 
-<section class="hero">
+
+
+<section class="hero" id="accueil">
 
 
 <div class="hero-container">
@@ -583,29 +522,37 @@ l'École
 
 
 
+
 <p>
 
-DALZON SHULE est une plateforme éducative numérique qui rapproche les écoles, les parents et les élèves grâce à une technologie moderne.
+DALZON SHULE est une plateforme numérique qui rapproche les écoles, les parents et les élèves dans un environnement moderne, simple et sécurisé.
 
 </p>
 
 
 
-<div class="hero-buttons">
+<div class="actions">
 
 
-<a href="#" class="btn btn-primary">
+<a href="#telecharger" class="btn primary">
 
-Découvrir DALZON
+<i class="fa-solid fa-mobile-screen"></i>
+
+Télécharger l'application
+
+</a>
+
+
+
+
+<a href="#fonctionnalites" class="btn secondary">
+
+<i class="fa-solid fa-circle-info"></i>
+
+Découvrir
 
 </a>
 
-
-<a href="#" class="btn btn-outline">
-
-Nous contacter
-
-</a>
 
 
 </div>
@@ -617,24 +564,20 @@ Nous contacter
 
 
 
-<div class="app-showcase">
 
 
-<div class="app-header">
+
+<div class="application">
+
+
+<div class="application-header">
 
 
 <div class="app-logo">
 
-
-<svg viewBox="0 0 24 24">
-
-<path d="M12 3L2 8l10 5 10-5-10-5zM2 12l10 5 10-5M2 16l10 5 10-5"/>
-
-</svg>
-
+D
 
 </div>
-
 
 
 <h2>
@@ -649,118 +592,32 @@ DALZON SHULE
 
 
 
+<div class="app-card">
 
+<i class="fa-solid fa-school"></i>
 
-<div class="dashboard">
-
-
-
-<div class="dashboard-card">
-
-
-<div class="dashboard-icon">
-
-<svg viewBox="0 0 24 24">
-
-<path d="M4 4h16v16H4z"/>
-
-</svg>
+Gestion scolaire numérique
 
 </div>
 
 
-<div>
 
-<h3>
+<div class="app-card">
 
-Gestion scolaire
+<i class="fa-solid fa-chart-line"></i>
 
-</h3>
-
-<p>
-
-Administration simplifiée
-
-</p>
-
-</div>
-
+Suivi des résultats
 
 </div>
 
 
 
 
+<div class="app-card">
 
+<i class="fa-solid fa-comments"></i>
 
-<div class="dashboard-card">
-
-
-<div class="dashboard-icon">
-
-<svg viewBox="0 0 24 24">
-
-<path d="M12 3L1 9l11 6 11-6-11-6z"/>
-
-</svg>
-
-</div>
-
-
-<div>
-
-<h3>
-
-Notes et résultats
-
-</h3>
-
-<p>
-
-Suivi scolaire numérique
-
-</p>
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-<div class="dashboard-card">
-
-
-<div class="dashboard-icon">
-
-<svg viewBox="0 0 24 24">
-
-<path d="M20 2H4a2 2 0 0 0-2 2v16l4-4h14a2 2 0 0 0 2-2V4z"/>
-
-</svg>
-
-</div>
-
-
-<div>
-
-<h3>
-
-Communication
-
-</h3>
-
-<p>
-
-Parents et enseignants connectés
-
-</p>
-
-</div>
-
+Communication école-famille
 
 </div>
 
@@ -769,7 +626,6 @@ Parents et enseignants connectés
 </div>
 
 
-</div>
 
 
 </div>
@@ -781,60 +637,698 @@ Parents et enseignants connectés
 
 
 
+
 <script>
+
 
 const menuBtn=document.getElementById("menuBtn");
 
 const menu=document.getElementById("menu");
 
 
+
 menuBtn.onclick=function(){
+
 
 menu.classList.toggle("active");
 
 
-menuBtn.innerHTML=
+menuBtn.innerHTML =
 
 menu.classList.contains("active")
-?"✕"
-:"☰";
 
-}
+?
+
+'<i class="fa-solid fa-xmark"></i>'
+
+:
+
+'<i class="fa-solid fa-bars"></i>';
+
+};
+
+
+
+document.querySelectorAll(".menu a").forEach(link=>{
+
+
+link.onclick=function(){
+
+menu.classList.remove("active");
+
+menuBtn.innerHTML=
+'<i class="fa-solid fa-bars"></i>';
+
+};
+
+
+});
 
 
 </script>
-<!-- ==========================
-PARTIE 2 : SOLUTIONS DALZON SHULE
+  <!-- ==========================
+PARTIE 2
+TELECHARGEMENT + CONNEXION
 ========================== -->
 
 
 <style>
 
 
-.section{
+/* TELECHARGEMENT */
 
-padding:100px 8%;
+
+.download-section{
+
+padding:120px 8%;
+
+background:#101828;
+
+color:white;
+
+text-align:center;
 
 }
 
 
-.container{
+.download-section h2{
 
-max-width:1200px;
+font-size:45px;
+
+font-weight:900;
+
+}
+
+
+
+.download-section p{
+
+max-width:700px;
+
+margin:20px auto 40px;
+
+line-height:30px;
+
+color:#D0D5DD;
+
+font-size:18px;
+
+}
+
+
+
+
+.store-container{
+
+display:flex;
+
+justify-content:center;
+
+gap:25px;
+
+flex-wrap:wrap;
+
+}
+
+
+
+
+.store-button{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+background:white;
+
+padding:15px 25px;
+
+border-radius:16px;
+
+text-decoration:none;
+
+color:#101828;
+
+transition:.3s;
+
+}
+
+
+
+.store-button:hover{
+
+transform:translateY(-6px);
+
+}
+
+
+
+.store-button img{
+
+width:45px;
+
+height:45px;
+
+object-fit:contain;
+
+}
+
+
+
+.store-button small{
+
+display:block;
+
+font-size:11px;
+
+}
+
+
+
+.store-button strong{
+
+font-size:18px;
+
+}
+
+
+
+
+
+/* CONNEXION */
+
+
+.login-section{
+
+padding:110px 8%;
+
+background:#F9FAFB;
+
+}
+
+
+
+.login-card{
+
+max-width:550px;
 
 margin:auto;
 
+background:white;
+
+padding:45px;
+
+border-radius:30px;
+
+box-shadow:0 25px 70px rgba(0,0,0,.1);
+
 }
 
 
 
-.title{
+.login-card h2{
 
 text-align:center;
+
+font-size:38px;
+
+margin-bottom:15px;
+
+}
+
+
+
+.login-description{
+
+text-align:center;
+
+color:#667085;
+
+margin-bottom:35px;
+
+}
+
+
+
+
+
+.account-choice{
+
+display:flex;
+
+align-items:center;
+
+gap:20px;
+
+padding:22px;
+
+background:#F2F4F7;
+
+border-radius:20px;
+
+margin-bottom:20px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+
+
+.account-choice:hover{
+
+background:#EAF2FF;
+
+}
+
+
+
+.account-choice i{
+
+font-size:35px;
+
+color:#155EEF;
+
+}
+
+
+
+.account-choice h3{
+
+font-size:21px;
+
+}
+
+
+
+.account-choice p{
+
+color:#667085;
+
+margin-top:5px;
+
+}
+
+
+
+
+.connection-form{
+
+display:none;
+
+margin-top:30px;
+
+}
+
+
+
+.connection-form.active{
+
+display:block;
+
+}
+
+
+
+.connection-form input{
+
+width:100%;
+
+padding:17px;
+
+border-radius:15px;
+
+border:1px solid #D0D5DD;
+
+margin-bottom:15px;
+
+font-size:16px;
+
+}
+
+
+
+.submit-btn{
+
+width:100%;
+
+padding:17px;
+
+background:#155EEF;
+
+color:white;
+
+border:none;
+
+border-radius:15px;
+
+font-size:17px;
+
+font-weight:800;
+
+cursor:pointer;
+
+}
+
+
+
+.submit-btn:hover{
+
+background:#004EEB;
+
+}
+
+
+
+</style>
+
+
+
+
+
+
+<section class="download-section" id="telecharger">
+
+
+<h2>
+
+Télécharger DALZON SHULE
+
+</h2>
+
+
+
+<p>
+
+Installez l'application DALZON SHULE pour accéder aux services scolaires numériques partout.
+
+</p>
+
+
+
+
+<div class="store-container">
+
+
+
+<!-- GOOGLE PLAY -->
+
+<a href="#" class="store-button">
+
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg">
+
+
+<div>
+
+<small>
+
+Disponible sur
+
+</small>
+
+
+<strong>
+
+Google Play
+
+</strong>
+
+
+</div>
+
+
+</a>
+
+
+
+
+
+
+
+<!-- APP STORE -->
+
+
+<a href="#" class="store-button">
+
+
+<img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg">
+
+
+<div>
+
+<small>
+
+Télécharger sur
+
+</small>
+
+
+<strong>
+
+App Store
+
+</strong>
+
+
+</div>
+
+
+</a>
+
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<section class="login-section" id="connexion">
+
+
+
+<div class="login-card">
+
+
+<h2>
+
+Connexion DALZON SHULE
+
+</h2>
+
+
+
+<p class="login-description">
+
+Sélectionnez votre espace d'accès.
+
+</p>
+
+
+
+
+
+
+
+<div class="account-choice" onclick="openAccount('school')">
+
+
+<i class="fa-solid fa-school"></i>
+
+
+<div>
+
+<h3>
+
+École
+
+</h3>
+
+
+<p>
+
+Administration et gestion scolaire
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="account-choice" onclick="openAccount('student')">
+
+
+<i class="fa-solid fa-user-graduate"></i>
+
+
+<div>
+
+<h3>
+
+Élève
+
+</h3>
+
+
+<p>
+
+Connexion avec numéro matricule
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- FORMULAIRE ECOLE -->
+
+
+<div class="connection-form" id="school">
+
+
+<input placeholder="Identifiant de l'école">
+
+
+<input type="password" placeholder="Mot de passe">
+
+
+<button class="submit-btn">
+
+<i class="fa-solid fa-right-to-bracket"></i>
+
+Se connecter
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- FORMULAIRE ELEVE -->
+
+
+<div class="connection-form" id="student">
+
+
+<input placeholder="Numéro matricule">
+
+
+<input type="password" placeholder="Mot de passe">
+
+
+<button class="submit-btn">
+
+<i class="fa-solid fa-arrow-right"></i>
+
+Accéder à mon espace
+
+</button>
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<script>
+
+
+function openAccount(type){
+
+
+document.querySelectorAll(".connection-form")
+
+.forEach(form=>{
+
+
+form.classList.remove("active");
+
+
+});
+
+
+document.getElementById(type)
+
+.classList.add("active");
+
+
+}
+
+
+
+</script>
+  <!-- ==========================
+PARTIE 3
+DETAILS DALZON SHULE + CONTACT
+========================== -->
+
+
+<style>
+
+
+/* FONCTIONNALITES */
+
+
+.features{
+
+padding:110px 8%;
+
+}
+
+
+
+.section-header{
 
 max-width:750px;
 
 margin:auto;
+
+text-align:center;
 
 margin-bottom:60px;
 
@@ -842,19 +1336,19 @@ margin-bottom:60px;
 
 
 
-.title h2{
+.section-header h2{
 
 font-size:45px;
 
 font-weight:900;
 
-margin-bottom:20px;
-
 }
 
 
 
-.title p{
+.section-header p{
+
+margin-top:20px;
 
 color:#667085;
 
@@ -867,15 +1361,12 @@ line-height:30px;
 
 
 
-.features{
 
-background:#F9FAFB;
+.features-grid{
 
-}
+max-width:1200px;
 
-
-
-.feature-grid{
+margin:auto;
 
 display:grid;
 
@@ -887,6 +1378,8 @@ gap:30px;
 
 
 
+
+
 .feature-card{
 
 background:white;
@@ -895,9 +1388,9 @@ padding:35px;
 
 border-radius:25px;
 
-box-shadow:0 15px 40px rgba(0,0,0,.07);
+box-shadow:0 15px 40px rgba(0,0,0,.08);
 
-transition:.3s;
+transition:.4s;
 
 }
 
@@ -912,35 +1405,13 @@ transform:translateY(-8px);
 
 
 
-.feature-icon{
+.feature-card i{
 
-width:70px;
+font-size:40px;
 
-height:70px;
-
-border-radius:20px;
-
-background:#EAF2FF;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
+color:#155EEF;
 
 margin-bottom:25px;
-
-}
-
-
-
-.feature-icon svg{
-
-width:35px;
-
-height:35px;
-
-fill:#155EEF;
 
 }
 
@@ -969,63 +1440,68 @@ line-height:28px;
 
 
 
+/* VISION */
 
-/* UTILISATEURS */
 
-
-.community{
+.vision{
 
 padding:100px 8%;
-
-}
-
-
-
-.community-grid{
-
-display:grid;
-
-grid-template-columns:repeat(3,1fr);
-
-gap:30px;
-
-}
-
-
-
-.community-card{
 
 background:#101828;
 
 color:white;
 
-padding:40px;
+}
 
-border-radius:30px;
 
-text-align:center;
+
+.vision-box{
+
+max-width:1100px;
+
+margin:auto;
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:50px;
+
+align-items:center;
 
 }
 
 
 
-.community-card svg{
+.vision h2{
 
-width:55px;
-
-height:55px;
-
-fill:white;
-
-margin-bottom:20px;
+font-size:42px;
 
 }
 
 
 
-.community-card h3{
+.vision p{
 
-font-size:28px;
+margin-top:20px;
+
+line-height:32px;
+
+color:#D0D5DD;
+
+}
+
+
+
+.vision-item{
+
+background:white;
+
+color:#101828;
+
+padding:20px;
+
+border-radius:18px;
 
 margin-bottom:15px;
 
@@ -1033,587 +1509,11 @@ margin-bottom:15px;
 
 
 
-.community-card p{
+.vision-item i{
 
-color:#D0D5DD;
+color:#155EEF;
 
-line-height:28px;
-
-}
-
-
-
-
-
-@media(max-width:900px){
-
-
-.feature-grid,
-
-.community-grid{
-
-grid-template-columns:1fr;
-
-}
-
-
-
-.title h2{
-
-font-size:35px;
-
-}
-
-
-
-}
-
-
-</style>
-
-
-
-
-
-
-<section class="section features">
-
-
-<div class="container">
-
-
-<div class="title">
-
-
-<h2>
-
-Une plateforme scolaire intelligente
-
-</h2>
-
-
-<p>
-
-Des outils numériques conçus pour simplifier la gestion scolaire et améliorer la communication.
-
-</p>
-
-
-</div>
-
-
-
-
-
-<div class="feature-grid">
-
-
-
-
-
-<div class="feature-card">
-
-
-<div class="feature-icon">
-
-
-<svg viewBox="0 0 24 24">
-
-<path d="M3 5h18v14H3V5zm2 2v10h14V7H5z"/>
-
-</svg>
-
-
-</div>
-
-
-
-<h3>
-
-Gestion des élèves
-
-</h3>
-
-
-<p>
-
-Gestion des classes, présences et informations des élèves.
-
-</p>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="feature-card">
-
-
-<div class="feature-icon">
-
-
-<svg viewBox="0 0 24 24">
-
-<path d="M12 3L1 9l11 6 11-6-11-6zm0 9L5 9l7-4 7 4-7 3z"/>
-
-</svg>
-
-
-</div>
-
-
-
-<h3>
-
-Notes & bulletins
-
-</h3>
-
-
-<p>
-
-Les parents consultent les résultats rapidement.
-
-</p>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="feature-card">
-
-
-<div class="feature-icon">
-
-
-<svg viewBox="0 0 24 24">
-
-<path d="M20 2H4a2 2 0 0 0-2 2v16l4-4h14a2 2 0 0 0 2-2V4z"/>
-
-</svg>
-
-
-</div>
-
-
-
-<h3>
-
-Communication
-
-</h3>
-
-
-<p>
-
-Une connexion directe entre école et famille.
-
-</p>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="feature-card">
-
-
-<div class="feature-icon">
-
-
-<svg viewBox="0 0 24 24">
-
-<path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 15h-2v-2h2zm0-4h-2V7h2z"/>
-
-</svg>
-
-
-</div>
-
-
-
-<h3>
-
-Notifications
-
-</h3>
-
-
-<p>
-
-Recevez toutes les informations importantes.
-
-</p>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="feature-card">
-
-
-<div class="feature-icon">
-
-
-<svg viewBox="0 0 24 24">
-
-<path d="M12 1L3 5v6c0 5 3.5 9.5 9 11 5.5-1.5 9-6 9-11V5l-9-4z"/>
-
-</svg>
-
-
-</div>
-
-
-
-<h3>
-
-Sécurité
-
-</h3>
-
-
-<p>
-
-Protection moderne des données scolaires.
-
-</p>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="feature-card">
-
-
-<div class="feature-icon">
-
-
-<svg viewBox="0 0 24 24">
-
-<path d="M7 2h10a2 2 0 0 1 2 2v20H5V4a2 2 0 0 1 2-2z"/>
-
-</svg>
-
-
-</div>
-
-
-
-<h3>
-
-Application mobile
-
-</h3>
-
-
-<p>
-
-Disponible sur Android et iPhone.
-
-</p>
-
-
-</div>
-
-
-
-</div>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
-
-<section class="community">
-
-
-<div class="container">
-
-
-<div class="title">
-
-
-<h2>
-
-Une solution pour tous
-
-</h2>
-
-
-<p>
-
-DALZON SHULE accompagne toute la communauté éducative.
-
-</p>
-
-
-</div>
-
-
-
-
-<div class="community-grid">
-
-
-
-
-
-<div class="community-card">
-
-
-<svg viewBox="0 0 24 24">
-
-<path d="M12 3L2 12h3v9h6v-6h2v6h6v-9h3L12 3z"/>
-
-</svg>
-
-
-<h3>
-
-Écoles
-
-</h3>
-
-
-<p>
-
-Administration numérique simple et efficace.
-
-</p>
-
-
-</div>
-
-
-
-
-
-
-<div class="community-card">
-
-
-<svg viewBox="0 0 24 24">
-
-<path d="M12 12a5 5 0 1 0-5-5 5 5 0 0 0 5 5z"/>
-
-</svg>
-
-
-<h3>
-
-Élèves
-
-</h3>
-
-
-<p>
-
-Accès aux informations scolaires.
-
-</p>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="community-card">
-
-
-<svg viewBox="0 0 24 24">
-
-<path d="M16 11a4 4 0 1 0-8 0 4 4 0 0 0 8 0z"/>
-
-</svg>
-
-
-<h3>
-
-Parents
-
-</h3>
-
-
-<p>
-
-Suivi de la scolarité à distance.
-
-</p>
-
-
-</div>
-
-
-
-</div>
-
-
-</div>
-
-
-</section>
-   <!-- ==========================
-PARTIE 3 : DOWNLOAD + CONTACT + FOOTER
-========================== -->
-
-
-<style>
-
-
-.download{
-
-padding:100px 8%;
-
-background:linear-gradient(135deg,#155EEF,#003BBA);
-
-color:white;
-
-text-align:center;
-
-}
-
-
-
-.download h2{
-
-font-size:45px;
-
-font-weight:900;
-
-margin-bottom:20px;
-
-}
-
-
-
-.download p{
-
-max-width:750px;
-
-margin:auto;
-
-font-size:18px;
-
-line-height:30px;
-
-opacity:.9;
-
-}
-
-
-
-
-.store-buttons{
-
-margin-top:40px;
-
-display:flex;
-
-justify-content:center;
-
-gap:20px;
-
-flex-wrap:wrap;
-
-}
-
-
-
-
-.store{
-
-background:#000;
-
-border-radius:12px;
-
-padding:10px 20px;
-
-display:flex;
-
-align-items:center;
-
-gap:12px;
-
-color:white;
-
-text-decoration:none;
-
-transition:.3s;
-
-}
-
-
-
-.store:hover{
-
-transform:translateY(-5px);
-
-}
-
-
-
-.store svg{
-
-width:38px;
-
-height:38px;
-
-fill:white;
-
-}
-
-
-
-.store small{
-
-display:block;
-
-font-size:11px;
-
-}
-
-
-
-.store strong{
-
-font-size:18px;
+margin-right:10px;
 
 }
 
@@ -1636,7 +1536,7 @@ background:#F9FAFB;
 
 .contact-box{
 
-max-width:950px;
+max-width:900px;
 
 margin:auto;
 
@@ -1646,6 +1546,8 @@ padding:45px;
 
 border-radius:30px;
 
+text-align:center;
+
 box-shadow:0 20px 60px rgba(0,0,0,.08);
 
 }
@@ -1654,11 +1556,17 @@ box-shadow:0 20px 60px rgba(0,0,0,.08);
 
 .contact-box h2{
 
-text-align:center;
-
 font-size:40px;
 
-margin-bottom:35px;
+}
+
+
+
+.contact-box p{
+
+color:#667085;
+
+margin:20px 0;
 
 }
 
@@ -1670,23 +1578,23 @@ display:flex;
 
 justify-content:center;
 
-gap:30px;
+gap:20px;
 
 flex-wrap:wrap;
-
-margin-bottom:40px;
 
 }
 
 
 
-.info{
+.contact-item{
 
-display:flex;
+padding:18px 25px;
 
-align-items:center;
+border-radius:15px;
 
-gap:10px;
+background:#EAF2FF;
+
+color:#155EEF;
 
 font-weight:700;
 
@@ -1694,109 +1602,27 @@ font-weight:700;
 
 
 
-.info svg{
-
-width:28px;
-
-fill:#155EEF;
-
-}
-
-
-
-
-form{
-
-display:grid;
-
-gap:20px;
-
-}
-
-
-
-input,textarea{
-
-padding:17px;
-
-border-radius:15px;
-
-border:1px solid #D0D5DD;
-
-font-size:16px;
-
-}
-
-
-
-textarea{
-
-height:140px;
-
-}
-
-
-
-.send{
-
-background:#155EEF;
-
-color:white;
-
-border:0;
-
-padding:18px;
-
-border-radius:15px;
-
-font-weight:800;
-
-cursor:pointer;
-
-}
-
-
-
-
-
-/* WHATSAPP */
-
-
 .whatsapp{
 
-position:fixed;
-
-right:25px;
-
-bottom:25px;
-
-width:65px;
-
-height:65px;
-
-border-radius:50%;
-
-background:#25D366;
-
-display:flex;
+display:inline-flex;
 
 align-items:center;
 
-justify-content:center;
+gap:10px;
 
-z-index:999;
+margin-top:30px;
 
-box-shadow:0 15px 30px rgba(0,0,0,.25);
+padding:17px 30px;
 
-}
+border-radius:15px;
 
+background:#25D366;
 
+color:white;
 
-.whatsapp svg{
+text-decoration:none;
 
-width:35px;
-
-fill:white;
+font-weight:800;
 
 }
 
@@ -1811,21 +1637,19 @@ footer{
 
 background:#101828;
 
-color:white;
-
 padding:60px 8%;
 
 text-align:center;
+
+color:white;
 
 }
 
 
 
-footer h3{
+footer h2{
 
 font-size:35px;
-
-margin-bottom:15px;
 
 }
 
@@ -1833,9 +1657,11 @@ margin-bottom:15px;
 
 footer p{
 
-color:#D0D5DD;
+margin-top:15px;
 
 line-height:30px;
+
+color:#D0D5DD;
 
 }
 
@@ -1855,21 +1681,31 @@ font-size:14px;
 
 
 
-@media(max-width:600px){
+@media(max-width:850px){
 
 
-.download h2{
+.features-grid{
+
+grid-template-columns:1fr;
+
+}
+
+
+
+.vision-box{
+
+grid-template-columns:1fr;
+
+}
+
+
+
+.section-header h2{
 
 font-size:32px;
 
 }
 
-
-.contact-box{
-
-padding:25px;
-
-}
 
 
 }
@@ -1880,83 +1716,276 @@ padding:25px;
 
 
 
-<section class="download">
+
+
+<section class="features" id="fonctionnalites">
+
+
+<div class="section-header">
 
 
 <h2>
 
-Téléchargez DALZON SHULE
+Une solution complète pour l'éducation
 
 </h2>
 
 
-
 <p>
 
-L'application qui rapproche l'école, les parents et les élèves partout en République Démocratique du Congo.
+DALZON SHULE facilite la gestion scolaire et améliore la communication entre les acteurs de l'éducation.
 
 </p>
 
 
+</div>
 
 
-<div class="store-buttons">
 
 
 
-<a href="#" class="store">
+<div class="features-grid">
 
 
-<!-- Apple Icon -->
+
+<div class="feature-card">
 
 
-<svg viewBox="0 0 24 24">
-
-<path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9 7.31c1.32.07 2.24.73 3.02.79 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.41 1.8-3.13 1.87-2.39 5.97.48 7.12-.57 1.5-1.32 2.99-2.43 4.1z"/>
-
-</svg>
+<i class="fa-solid fa-file-lines"></i>
 
 
-<div>
+<h3>
 
-<small>Disponible sur</small>
+Bulletins numériques
 
-<strong>App Store</strong>
+</h3>
+
+
+<p>
+
+Consultation rapide des résultats scolaires et performances des élèves.
+
+</p>
+
 
 </div>
 
 
-</a>
 
 
 
+<div class="feature-card">
 
 
+<i class="fa-solid fa-users"></i>
 
 
-<a href="#" class="store">
+<h3>
+
+Gestion des élèves
+
+</h3>
 
 
-<!-- Google Play Icon -->
+<p>
 
+Suivi des élèves, classes, présences et informations administratives.
 
-<svg viewBox="0 0 24 24">
+</p>
 
-<path d="M3 2v20l18-10L3 2z"/>
-
-</svg>
-
-
-<div>
-
-<small>Télécharger sur</small>
-
-<strong>Google Play</strong>
 
 </div>
 
 
-</a>
+
+
+
+
+
+<div class="feature-card">
+
+
+<i class="fa-solid fa-comments"></i>
+
+
+<h3>
+
+Communication scolaire
+
+</h3>
+
+
+<p>
+
+Une connexion directe entre écoles, parents et élèves.
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="feature-card">
+
+
+<i class="fa-solid fa-bell"></i>
+
+
+<h3>
+
+Notifications
+
+</h3>
+
+
+<p>
+
+Recevez les informations importantes en temps réel.
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="feature-card">
+
+
+<i class="fa-solid fa-shield-halved"></i>
+
+
+<h3>
+
+Sécurité
+
+</h3>
+
+
+<p>
+
+Protection des données avec une approche numérique moderne.
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="feature-card">
+
+
+<i class="fa-solid fa-mobile-screen-button"></i>
+
+
+<h3>
+
+Application mobile
+
+</h3>
+
+
+<p>
+
+Une expérience adaptée aux smartphones Android et iPhone.
+
+</p>
+
+
+</div>
+
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<section class="vision">
+
+
+<div class="vision-box">
+
+
+<div>
+
+
+<h2>
+
+La vision DALZON SHULE
+
+</h2>
+
+
+<p>
+
+Construire une école connectée où la technologie rapproche les établissements, les familles et les élèves.
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div>
+
+
+<div class="vision-item">
+
+<i class="fa-solid fa-school"></i>
+
+Pour les écoles : gestion simple et efficace
+
+</div>
+
+
+
+<div class="vision-item">
+
+<i class="fa-solid fa-user-graduate"></i>
+
+Pour les élèves : accès aux informations scolaires
+
+</div>
+
+
+
+<div class="vision-item">
+
+<i class="fa-solid fa-house-user"></i>
+
+Pour les parents : suivi de la scolarité
+
+</div>
+
+
+
+</div>
 
 
 
@@ -1979,10 +2008,17 @@ L'application qui rapproche l'école, les parents et les élèves partout en Ré
 
 <h2>
 
-Contactez DALZON SHULE
+Contact DALZON SHULE
 
 </h2>
 
+
+
+<p>
+
+Notre équipe est disponible pour accompagner les écoles dans leur transformation numérique.
+
+</p>
 
 
 
@@ -1990,38 +2026,22 @@ Contactez DALZON SHULE
 <div class="contact-info">
 
 
+<div class="contact-item">
 
-<div class="info">
-
-
-<svg viewBox="0 0 24 24">
-
-<path d="M6.6 10.8c1.5 3 3.9 5.4 6.9 6.9l2.3-2.3c.3-.3.8-.4 1.2-.3 1.3.4 2.7.6 4.1.6v3.3c0 .6-.4 1-1 1C10.4 21 3 13.6 3 4c0-.6.4-1 1-1h3.3c.6 0 1 .4 1 1 0 1.4.2 2.8.6 4.1.1.4 0 .8-.3 1.2z"/>
-
-</svg>
-
+<i class="fa-solid fa-phone"></i>
 
 +243 980 772 866
 
-
 </div>
 
 
 
+<div class="contact-item">
 
-<div class="info">
-
-
-<svg viewBox="0 0 24 24">
-
-<path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
-
-</svg>
-
+<i class="fa-solid fa-envelope"></i>
 
 Info.dalzon@gmail.com
 
-
 </div>
 
 
@@ -2031,28 +2051,16 @@ Info.dalzon@gmail.com
 
 
 
+<a href="https://wa.me/243980772866" class="whatsapp">
 
 
-<form>
+<i class="fa-brands fa-whatsapp"></i>
+
+Contacter WhatsApp
+
+</a>
 
 
-<input placeholder="Votre nom">
-
-
-<input placeholder="Votre email">
-
-
-<textarea placeholder="Votre message"></textarea>
-
-
-<button class="send">
-
-Envoyer le message
-
-</button>
-
-
-</form>
 
 
 </div>
@@ -2066,38 +2074,21 @@ Envoyer le message
 
 
 
-<a class="whatsapp" href="https://wa.me/243980772866">
-
-
-<svg viewBox="0 0 24 24">
-
-<path d="M12 2a10 10 0 0 0-8.7 14.9L2 22l5.3-1.3A10 10 0 1 0 12 2z"/>
-
-</svg>
-
-
-</a>
-
-
-
-
-
-
 <footer>
 
 
-<h3>
+<h2>
 
 DALZON SHULE
 
-</h3>
+</h2>
 
 
 <p>
 
 Connecter l'École à la Maison<br>
 
-Une innovation de DALZON ENTREPRISE
+Une solution développée par DALZON ENTREPRISE
 
 </p>
 
@@ -2111,4 +2102,6 @@ Une innovation de DALZON ENTREPRISE
 
 
 </footer>
+  </body>
+
 </html>
