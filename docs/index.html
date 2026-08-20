@@ -1,40 +1,74 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+
     <meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-    <meta
-        name="description"
-        content="DALZON SHULE — Connecter l'École à la Maison. Une expérience numérique pensée pour les élèves, parents, enseignants et établissements."
-    >
+    <meta name="description"
+          content="DALZON SHULE — Connecter l'École à la Maison.">
 
-    <meta
-        name="theme-color"
-        content="#07111f"
-        id="themeColor"
-    >
+    <meta name="theme-color"
+          content="#07111f"
+          id="themeColor">
+
+    <!-- =====================================================
+         VRAI LOGO DALZON SHULE — FAVICON
+         ===================================================== -->
+
+    <link rel="icon"
+          type="image/png"
+          href="https://i.postimg.cc/1V66N19t/Chat-GPT-Image-4-aout-2026-09-22-33.png">
+
+    <link rel="apple-touch-icon"
+          href="https://i.postimg.cc/1V66N19t/Chat-GPT-Image-4-aout-2026-09-22-33.png">
+
+    <!-- =====================================================
+         APERÇU SOCIAL
+         ===================================================== -->
+
+    <meta property="og:type"
+          content="website">
+
+    <meta property="og:title"
+          content="DALZON SHULE — Connecter l'École à la Maison">
+
+    <meta property="og:description"
+          content="L'écosystème numérique de DALZON SHULE.">
+
+    <meta property="og:image"
+          content="https://i.postimg.cc/1V66N19t/Chat-GPT-Image-4-aout-2026-09-22-33.png">
+
+    <meta name="twitter:card"
+          content="summary">
+
+    <meta name="twitter:title"
+          content="DALZON SHULE">
+
+    <meta name="twitter:description"
+          content="Connecter l'École à la Maison.">
+
+    <meta name="twitter:image"
+          content="https://i.postimg.cc/1V66N19t/Chat-GPT-Image-4-aout-2026-09-22-33.png">
+
 
     <title>
         DALZON SHULE — Connecter l'École à la Maison
     </title>
 
+
     <style>
 
-        /* =========================================================
+        /* =====================================================
            RESET
-        ========================================================= */
+           ===================================================== */
 
-        *,
-        *::before,
-        *::after {
-            box-sizing: border-box;
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
         html {
@@ -61,18 +95,13 @@
             overflow-x: hidden;
 
             transition:
-                background-color .35s ease,
+                background .35s ease,
                 color .35s ease;
         }
 
         body.light {
             background: #f5f8fc;
             color: #091522;
-        }
-
-        img {
-            max-width: 100%;
-            display: block;
         }
 
         a {
@@ -84,42 +113,33 @@
             font: inherit;
         }
 
-        /* =========================================================
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+
+        /* =====================================================
            VARIABLES
-        ========================================================= */
+           ===================================================== */
 
         :root {
+
             --blue: #1677ff;
             --blue-light: #43c2ff;
             --green: #42d996;
 
             --dark: #07111f;
-            --dark-2: #0b1929;
-            --dark-3: #102238;
-
-            --white: #ffffff;
             --muted: #9baec1;
-            --muted-2: #708398;
 
             --border-dark:
                 rgba(255,255,255,.10);
 
-            --card-dark:
-                rgba(14,32,51,.72);
-
-            --shadow-dark:
-                0 25px 70px rgba(0,0,0,.28);
-
-            --light-bg: #f5f8fc;
-            --light-card: #ffffff;
-            --light-text: #091522;
-            --light-muted: #607184;
-
             --border-light:
                 rgba(9,21,34,.10);
 
-            --shadow-light:
-                0 25px 60px rgba(31,70,105,.10);
+            --card-dark:
+                rgba(14,32,51,.72);
 
             --radius: 22px;
 
@@ -127,16 +147,18 @@
                 min(1180px, calc(100% - 40px));
         }
 
-        /* =========================================================
+
+        /* =====================================================
            BACKGROUND
-        ========================================================= */
+           ===================================================== */
 
         .site-background {
             position: fixed;
             inset: 0;
 
-            pointer-events: none;
             z-index: -20;
+
+            pointer-events: none;
 
             overflow: hidden;
         }
@@ -145,7 +167,7 @@
             position: absolute;
             inset: 0;
 
-            opacity: .07;
+            opacity: .06;
 
             background-image:
                 linear-gradient(
@@ -159,13 +181,6 @@
                 );
 
             background-size: 70px 70px;
-
-            mask-image:
-                linear-gradient(
-                    to bottom,
-                    black,
-                    transparent 80%
-                );
         }
 
         .light-orb {
@@ -178,7 +193,7 @@
 
             filter: blur(110px);
 
-            opacity: .18;
+            opacity: .16;
         }
 
         .orb-one {
@@ -197,22 +212,20 @@
             opacity: .035;
         }
 
-        body.light .light-orb {
-            opacity: .10;
-        }
 
-        /* =========================================================
+        /* =====================================================
            CONTAINER
-        ========================================================= */
+           ===================================================== */
 
         .container {
             width: var(--container);
             margin-inline: auto;
         }
 
-        /* =========================================================
+
+        /* =====================================================
            HEADER
-        ========================================================= */
+           ===================================================== */
 
         .header {
             position: fixed;
@@ -234,7 +247,7 @@
 
         .header.scrolled {
             background:
-                rgba(7,17,31,.78);
+                rgba(7,17,31,.80);
 
             backdrop-filter:
                 blur(18px);
@@ -243,12 +256,12 @@
                 var(--border-dark);
 
             box-shadow:
-                0 8px 35px rgba(0,0,0,.12);
+                0 8px 35px rgba(0,0,0,.15);
         }
 
         body.light .header.scrolled {
             background:
-                rgba(245,248,252,.82);
+                rgba(245,248,252,.85);
 
             border-color:
                 var(--border-light);
@@ -265,46 +278,44 @@
             justify-content: space-between;
         }
 
-        /* =========================================================
-           BRAND
-        ========================================================= */
+
+        /* =====================================================
+           VRAI LOGO DALZON SHULE
+           ===================================================== */
 
         .brand {
             display: flex;
             align-items: center;
+
             gap: 11px;
 
             flex-shrink: 0;
         }
 
-        .brand-logo {
-            width: 42px;
-            height: 42px;
+        .brand-logo-img {
+            width: 43px;
+            height: 43px;
 
-            display: grid;
-            place-items: center;
+            display: block;
+
+            object-fit: contain;
 
             border-radius: 12px;
 
-            background:
-                linear-gradient(
-                    135deg,
-                    #087cff,
-                    #43c2ff
-                );
+            flex-shrink: 0;
 
-            color: #fff;
+            transition:
+                transform .25s ease,
+                filter .25s ease;
+        }
 
-            font-size: 12px;
-            font-weight: 950;
-
-            box-shadow:
-                0 9px 30px
-                rgba(22,119,255,.32);
+        .brand:hover .brand-logo-img {
+            transform: scale(1.06);
         }
 
         .brand-name {
             font-size: 14px;
+
             font-weight: 900;
 
             letter-spacing: 1.4px;
@@ -318,18 +329,21 @@
             color: var(--muted);
 
             font-size: 7px;
+
             font-weight: 700;
 
             letter-spacing: 1.4px;
         }
 
-        /* =========================================================
+
+        /* =====================================================
            NAVIGATION
-        ========================================================= */
+           ===================================================== */
 
         .nav {
             display: flex;
             align-items: center;
+
             gap: 27px;
         }
 
@@ -339,17 +353,19 @@
             color: var(--muted);
 
             font-size: 12px;
+
             font-weight: 650;
 
-            transition: color .2s ease;
+            transition:
+                color .2s ease;
         }
 
         .nav-link:hover {
-            color: var(--white);
+            color: #fff;
         }
 
         body.light .nav-link:hover {
-            color: var(--light-text);
+            color: #091522;
         }
 
         .nav-link::after {
@@ -363,26 +379,30 @@
 
             height: 1px;
 
-            background: var(--blue-light);
+            background:
+                var(--blue-light);
 
-            transform: scaleX(0);
+            transform:
+                scaleX(0);
 
-            transform-origin: center;
-
-            transition: transform .25s ease;
+            transition:
+                transform .25s ease;
         }
 
         .nav-link:hover::after {
-            transform: scaleX(1);
+            transform:
+                scaleX(1);
         }
 
-        /* =========================================================
+
+        /* =====================================================
            HEADER ACTIONS
-        ========================================================= */
+           ===================================================== */
 
         .header-actions {
             display: flex;
             align-items: center;
+
             gap: 8px;
         }
 
@@ -393,49 +413,45 @@
             display: grid;
             place-items: center;
 
-            border-radius: 12px;
-
             border:
-                1px solid var(--border-dark);
+                1px solid
+                var(--border-dark);
+
+            border-radius: 12px;
 
             background:
                 rgba(255,255,255,.055);
 
-            color: var(--white);
+            color: #fff;
 
             cursor: pointer;
-
-            transition:
-                transform .2s ease,
-                border-color .2s ease;
         }
 
         body.light .theme-toggle {
-            border-color: var(--border-light);
-            background: rgba(255,255,255,.8);
-            color: var(--light-text);
-        }
+            color: #091522;
 
-        .theme-toggle:hover {
-            transform: translateY(-2px);
-            border-color: var(--blue-light);
+            background:
+                rgba(255,255,255,.8);
+
+            border-color:
+                var(--border-light);
         }
 
         .theme-toggle svg {
             width: 18px;
             height: 18px;
+
             fill: currentColor;
         }
 
         .login-button {
+            min-height: 40px;
+
             display: inline-flex;
             align-items: center;
             justify-content: center;
 
-            min-height: 40px;
-
-            padding:
-                0 16px;
+            padding: 0 17px;
 
             border-radius: 12px;
 
@@ -449,6 +465,7 @@
             color: #fff;
 
             font-size: 11px;
+
             font-weight: 850;
 
             box-shadow:
@@ -456,16 +473,12 @@
                 rgba(22,119,255,.22);
 
             transition:
-                transform .2s ease,
-                box-shadow .2s ease;
+                transform .2s ease;
         }
 
         .login-button:hover {
-            transform: translateY(-2px);
-
-            box-shadow:
-                0 12px 32px
-                rgba(22,119,255,.30);
+            transform:
+                translateY(-2px);
         }
 
         .mobile-menu {
@@ -487,12 +500,14 @@
         .mobile-menu svg {
             width: 21px;
             height: 21px;
+
             fill: currentColor;
         }
 
-        /* =========================================================
+
+        /* =====================================================
            HERO
-        ========================================================= */
+           ===================================================== */
 
         .hero {
             min-height: 100svh;
@@ -510,6 +525,7 @@
 
         .hero-photo {
             position: absolute;
+
             inset: 0;
 
             z-index: -5;
@@ -520,18 +536,13 @@
                 )
                 center / cover no-repeat;
 
-            transform: scale(1.03);
-
-            transition:
-                transform 1.2s ease;
-        }
-
-        .hero:hover .hero-photo {
-            transform: scale(1.045);
+            transform:
+                scale(1.03);
         }
 
         .hero-overlay {
             position: absolute;
+
             inset: 0;
 
             z-index: -4;
@@ -552,7 +563,7 @@
                     90deg,
                     rgba(245,248,252,.98) 0%,
                     rgba(245,248,252,.90) 38%,
-                    rgba(245,248,252,.62) 72%,
+                    rgba(245,248,252,.63) 72%,
                     rgba(245,248,252,.70) 100%
                 );
         }
@@ -571,7 +582,8 @@
             background:
                 rgba(22,119,255,.20);
 
-            filter: blur(110px);
+            filter:
+                blur(110px);
 
             z-index: -3;
         }
@@ -583,6 +595,7 @@
         .eyebrow {
             display: inline-flex;
             align-items: center;
+
             gap: 9px;
 
             padding:
@@ -600,9 +613,11 @@
             backdrop-filter:
                 blur(14px);
 
-            color: #a7ddff;
+            color:
+                #a7ddff;
 
             font-size: 8px;
+
             font-weight: 900;
 
             letter-spacing: 1.7px;
@@ -622,7 +637,8 @@
 
             border-radius: 50%;
 
-            background: var(--green);
+            background:
+                var(--green);
 
             box-shadow:
                 0 0 12px
@@ -651,12 +667,17 @@
                     #ffffff
                 );
 
-            background-size: 200% auto;
+            background-size:
+                200% auto;
 
-            -webkit-background-clip: text;
-            background-clip: text;
+            -webkit-background-clip:
+                text;
 
-            color: transparent;
+            background-clip:
+                text;
+
+            color:
+                transparent;
 
             animation:
                 titleShine 6s linear infinite;
@@ -671,15 +692,20 @@
                     #07111f
                 );
 
-            background-size: 200% auto;
+            background-size:
+                200% auto;
 
-            -webkit-background-clip: text;
-            background-clip: text;
+            -webkit-background-clip:
+                text;
+
+            background-clip:
+                text;
         }
 
         @keyframes titleShine {
             to {
-                background-position: 200% center;
+                background-position:
+                    200% center;
             }
         }
 
@@ -688,7 +714,8 @@
 
             margin-top: 28px;
 
-            color: #c2d0de;
+            color:
+                #c2d0de;
 
             font-size: 16px;
 
@@ -696,20 +723,24 @@
         }
 
         body.light .hero-description {
-            color: #4e6072;
+            color:
+                #4e6072;
         }
 
         .hero-description strong {
-            color: #fff;
+            color:
+                #fff;
         }
 
         body.light .hero-description strong {
-            color: var(--light-text);
+            color:
+                #091522;
         }
 
         .hero-buttons {
             display: flex;
             flex-wrap: wrap;
+
             gap: 12px;
 
             margin-top: 32px;
@@ -721,6 +752,7 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
+
             gap: 9px;
 
             padding:
@@ -729,12 +761,16 @@
             border-radius: 14px;
 
             font-size: 12px;
+
             font-weight: 850;
 
             transition:
-                transform .25s ease,
-                box-shadow .25s ease,
-                border-color .25s ease;
+                transform .25s ease;
+        }
+
+        .button:hover {
+            transform:
+                translateY(-3px);
         }
 
         .button-primary {
@@ -763,28 +799,26 @@
             backdrop-filter:
                 blur(14px);
 
-            color: #fff;
+            color:
+                #fff;
         }
 
         body.light .button-secondary {
-            border-color:
-                var(--border-light);
-
             background:
                 rgba(255,255,255,.70);
 
-            color:
-                var(--light-text);
-        }
+            border-color:
+                var(--border-light);
 
-        .button:hover {
-            transform: translateY(-3px);
+            color:
+                #091522;
         }
 
         .hero-bottom {
             margin-top: 46px;
 
             display: flex;
+
             gap: 35px;
         }
 
@@ -812,17 +846,20 @@
 
             margin-top: 4px;
 
-            color: var(--muted);
+            color:
+                var(--muted);
 
             font-size: 9px;
         }
 
-        /* =========================================================
-           GENERAL SECTIONS
-        ========================================================= */
+
+        /* =====================================================
+           SECTIONS
+           ===================================================== */
 
         .section {
-            padding: 115px 0;
+            padding:
+                115px 0;
         }
 
         .section-header {
@@ -836,6 +873,7 @@
                 var(--blue-light);
 
             font-size: 9px;
+
             font-weight: 900;
 
             letter-spacing: 2px;
@@ -866,12 +904,14 @@
         }
 
         body.light .section-text {
-            color: var(--light-muted);
+            color:
+                #607184;
         }
 
-        /* =========================================================
+
+        /* =====================================================
            CARDS
-        ========================================================= */
+           ===================================================== */
 
         .cards {
             display: grid;
@@ -902,16 +942,11 @@
             backdrop-filter:
                 blur(16px);
 
-            box-shadow:
-                0 15px 45px
-                rgba(0,0,0,.10);
-
             overflow: hidden;
 
             transition:
                 transform .3s ease,
-                border-color .3s ease,
-                box-shadow .3s ease;
+                border-color .3s ease;
         }
 
         body.light .card {
@@ -920,43 +955,14 @@
 
             border-color:
                 var(--border-light);
-
-            box-shadow:
-                var(--shadow-light);
-        }
-
-        .card::before {
-            content: "";
-
-            position: absolute;
-
-            width: 130px;
-            height: 130px;
-
-            right: -65px;
-            top: -65px;
-
-            border-radius: 50%;
-
-            background:
-                rgba(22,119,255,.12);
-
-            filter: blur(15px);
         }
 
         .card:hover {
-            transform: translateY(-7px);
+            transform:
+                translateY(-7px);
 
             border-color:
                 rgba(67,194,255,.30);
-
-            box-shadow:
-                var(--shadow-dark);
-        }
-
-        body.light .card:hover {
-            box-shadow:
-                var(--shadow-light);
         }
 
         .card-icon {
@@ -984,17 +990,11 @@
 
             fill:
                 var(--blue-light);
-
-            transition:
-                transform .25s ease;
-        }
-
-        .card:hover .card-icon svg {
-            transform: scale(1.10);
         }
 
         .card h3 {
             font-size: 18px;
+
             font-weight: 850;
         }
 
@@ -1010,12 +1010,14 @@
         }
 
         body.light .card p {
-            color: var(--light-muted);
+            color:
+                #607184;
         }
 
-        /* =========================================================
+
+        /* =====================================================
            ECOSYSTEM
-        ========================================================= */
+           ===================================================== */
 
         .ecosystem {
             display: grid;
@@ -1037,22 +1039,16 @@
             background:
                 var(--card-dark);
 
-            box-shadow:
-                var(--shadow-dark);
-
             overflow: hidden;
         }
 
         body.light .ecosystem-main,
         body.light .ecosystem-side {
+            background:
+                #fff;
+
             border-color:
                 var(--border-light);
-
-            background:
-                var(--light-card);
-
-            box-shadow:
-                var(--shadow-light);
         }
 
         .ecosystem-main {
@@ -1063,7 +1059,9 @@
             position: relative;
 
             display: flex;
+
             flex-direction: column;
+
             justify-content: flex-end;
         }
 
@@ -1071,6 +1069,7 @@
             content: "";
 
             position: absolute;
+
             inset: 0;
 
             background:
@@ -1118,6 +1117,7 @@
             display: flex;
 
             align-items: center;
+
             justify-content: space-between;
 
             gap: 15px;
@@ -1127,9 +1127,6 @@
             border-bottom:
                 1px solid
                 var(--border-dark);
-
-            transition:
-                padding .2s ease;
         }
 
         body.light .ecosystem-link {
@@ -1141,13 +1138,11 @@
             border-bottom: 0;
         }
 
-        .ecosystem-link:hover {
-            padding-left: 7px;
-        }
-
         .ecosystem-link-left {
             display: flex;
+
             align-items: center;
+
             gap: 13px;
         }
 
@@ -1156,6 +1151,7 @@
             height: 42px;
 
             display: grid;
+
             place-items: center;
 
             border-radius: 12px;
@@ -1196,9 +1192,10 @@
             font-size: 18px;
         }
 
-        /* =========================================================
-           APPLICATION / CTA
-        ========================================================= */
+
+        /* =====================================================
+           CTA
+           ===================================================== */
 
         .cta {
             position: relative;
@@ -1219,44 +1216,18 @@
             border:
                 1px solid
                 rgba(69,194,255,.15);
-
-            box-shadow:
-                var(--shadow-dark);
         }
 
         body.light .cta {
             background:
                 linear-gradient(
                     135deg,
-                    #ffffff,
+                    #fff,
                     #edf5fc
                 );
 
             border-color:
                 var(--border-light);
-
-            box-shadow:
-                var(--shadow-light);
-        }
-
-        .cta::before {
-            content: "";
-
-            position: absolute;
-
-            width: 500px;
-            height: 500px;
-
-            right: -250px;
-            top: -250px;
-
-            border-radius: 50%;
-
-            background:
-                rgba(22,119,255,.18);
-
-            filter:
-                blur(80px);
         }
 
         .cta-content {
@@ -1288,9 +1259,10 @@
             line-height: 1.8;
         }
 
-        /* =========================================================
+
+        /* =====================================================
            STORE BUTTONS
-        ========================================================= */
+           ===================================================== */
 
         .stores {
             display: flex;
@@ -1308,6 +1280,7 @@
             min-height: 58px;
 
             display: flex;
+
             align-items: center;
 
             gap: 12px;
@@ -1324,7 +1297,8 @@
             background:
                 #03080e;
 
-            color: #fff;
+            color:
+                #fff;
 
             cursor: pointer;
 
@@ -1334,7 +1308,8 @@
         }
 
         .store-button:hover {
-            transform: translateY(-3px);
+            transform:
+                translateY(-3px);
 
             border-color:
                 var(--blue-light);
@@ -1344,9 +1319,8 @@
             width: 27px;
             height: 27px;
 
-            fill: currentColor;
-
-            flex-shrink: 0;
+            fill:
+                currentColor;
         }
 
         .store-text {
@@ -1356,7 +1330,8 @@
         .store-small {
             display: block;
 
-            color: #94a6b8;
+            color:
+                #94a6b8;
 
             font-size: 8px;
         }
@@ -1367,12 +1342,14 @@
             margin-top: 2px;
 
             font-size: 14px;
+
             font-weight: 850;
         }
 
-        /* =========================================================
+
+        /* =====================================================
            FOOTER
-        ========================================================= */
+           ===================================================== */
 
         .footer {
             padding:
@@ -1427,9 +1404,6 @@
                 var(--muted);
 
             font-size: 10px;
-
-            transition:
-                color .2s ease;
         }
 
         .footer-link:hover {
@@ -1449,7 +1423,7 @@
             text-align: center;
 
             color:
-                var(--muted-2);
+                #708398;
 
             font-size: 9px;
         }
@@ -1459,17 +1433,20 @@
                 var(--border-light);
         }
 
-        /* =========================================================
+
+        /* =====================================================
            MODAL
-        ========================================================= */
+           ===================================================== */
 
         .modal {
             position: fixed;
+
             inset: 0;
 
             z-index: 3000;
 
             display: none;
+
             align-items: center;
             justify-content: center;
 
@@ -1501,37 +1478,20 @@
                 1px solid
                 rgba(255,255,255,.12);
 
-            box-shadow:
-                0 35px 100px rgba(0,0,0,.45);
-
             text-align: center;
-
-            animation:
-                modalIn .25s ease;
         }
 
         body.light .modal-box {
             background:
-                #ffffff;
+                #fff;
 
             border-color:
                 var(--border-light);
         }
 
-        @keyframes modalIn {
-            from {
-                opacity: 0;
-                transform: translateY(15px) scale(.98);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0) scale(1);
-            }
-        }
-
         .modal-title {
             font-size: 24px;
+
             font-weight: 900;
         }
 
@@ -1564,14 +1524,16 @@
             color: #fff;
 
             font-size: 12px;
+
             font-weight: 850;
 
             cursor: pointer;
         }
 
-        /* =========================================================
-           SCROLL ANIMATION
-        ========================================================= */
+
+        /* =====================================================
+           ANIMATIONS
+           ===================================================== */
 
         .reveal {
             opacity: 0;
@@ -1591,9 +1553,10 @@
                 translateY(0);
         }
 
-        /* =========================================================
-           MOBILE
-        ========================================================= */
+
+        /* =====================================================
+           TABLET
+           ===================================================== */
 
         @media (max-width: 900px) {
 
@@ -1601,12 +1564,14 @@
                 position: fixed;
 
                 top: 76px;
+
                 left: 20px;
                 right: 20px;
 
                 display: none;
 
                 flex-direction: column;
+
                 align-items: stretch;
 
                 gap: 0;
@@ -1621,9 +1586,6 @@
                 border:
                     1px solid
                     var(--border-dark);
-
-                box-shadow:
-                    0 25px 70px rgba(0,0,0,.35);
 
                 backdrop-filter:
                     blur(20px);
@@ -1642,7 +1604,8 @@
             }
 
             .nav-link {
-                padding: 13px 10px;
+                padding:
+                    13px 10px;
             }
 
             .nav-link::after {
@@ -1657,17 +1620,11 @@
                 border-top:
                     1px solid
                     var(--border-dark);
-
-                justify-content: space-between;
-            }
-
-            body.light .header-actions {
-                border-color:
-                    var(--border-light);
             }
 
             .mobile-menu {
                 display: grid;
+
                 place-items: center;
             }
 
@@ -1682,32 +1639,37 @@
 
             .footer-grid {
                 grid-template-columns:
-                    1fr 1fr;
+                    repeat(2, 1fr);
             }
         }
+
+
+        /* =====================================================
+           MOBILE
+           ===================================================== */
 
         @media (max-width: 620px) {
 
             :root {
                 --container:
-                    min(100% - 28px, 1180px);
+                    calc(100% - 28px);
             }
 
             .navbar {
                 height: 70px;
             }
 
-            .brand-tagline {
-                display: none;
+            .brand-logo-img {
+                width: 38px;
+                height: 38px;
             }
 
             .brand-name {
                 font-size: 12px;
             }
 
-            .brand-logo {
-                width: 38px;
-                height: 38px;
+            .brand-tagline {
+                display: none;
             }
 
             .login-button {
@@ -1721,6 +1683,7 @@
 
             .hero-title {
                 font-size: 56px;
+
                 letter-spacing: -4px;
             }
 
@@ -1738,6 +1701,7 @@
 
             .hero-bottom {
                 flex-direction: column;
+
                 gap: 16px;
             }
 
@@ -1761,7 +1725,8 @@
             }
 
             .cta {
-                padding: 35px 25px;
+                padding:
+                    35px 25px;
             }
 
             .stores {
@@ -1774,39 +1739,43 @@
 
             .footer-grid {
                 grid-template-columns: 1fr;
+
                 gap: 30px;
             }
         }
 
-        /* =========================================================
-           ACCESSIBILITY
-        ========================================================= */
 
         @media (prefers-reduced-motion: reduce) {
 
             *,
             *::before,
             *::after {
-                scroll-behavior: auto !important;
+
                 animation: none !important;
+
                 transition: none !important;
+
+                scroll-behavior: auto !important;
             }
 
             .reveal {
                 opacity: 1;
+
                 transform: none;
             }
         }
 
     </style>
+
 </head>
 
 
 <body>
 
-    <!-- =========================================================
+
+    <!-- =====================================================
          BACKGROUND
-    ========================================================= -->
+         ===================================================== -->
 
     <div class="site-background">
 
@@ -1819,13 +1788,21 @@
     </div>
 
 
-    <!-- =========================================================
+    <!-- =====================================================
          HEADER
-    ========================================================= -->
+         ===================================================== -->
 
-    <header class="header" id="header">
+    <header
+        class="header"
+        id="header"
+    >
 
         <div class="container navbar">
+
+
+            <!-- =================================================
+                 VRAI LOGO
+                 ================================================= -->
 
             <a
                 href="#accueil"
@@ -1833,9 +1810,11 @@
                 aria-label="DALZON SHULE"
             >
 
-                <div class="brand-logo">
-                    DS
-                </div>
+                <img
+                    src="https://i.postimg.cc/1V66N19t/Chat-GPT-Image-4-aout-2026-09-22-33.png"
+                    alt="Logo DALZON SHULE"
+                    class="brand-logo-img"
+                >
 
                 <div>
 
@@ -1851,6 +1830,10 @@
 
             </a>
 
+
+            <!-- =================================================
+                 NAVIGATION
+                 ================================================= -->
 
             <nav
                 class="nav"
@@ -1885,7 +1868,10 @@
                     Application
                 </a>
 
+
                 <div class="header-actions">
+
+                    <!-- CHANGEMENT DE THÈME -->
 
                     <button
                         type="button"
@@ -1895,17 +1881,22 @@
                         title="Changer le thème"
                     >
 
-                        <!-- Soleil -->
                         <svg
                             id="themeIcon"
                             viewBox="0 0 24 24"
-                            aria-hidden="true"
                         >
-                            <path d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12zm0-16a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0V3a1 1 0 0 1 1-1zm0 19a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0v-1a1 1 0 0 1 1-1zM3 11h1a1 1 0 1 1 0 2H3a1 1 0 1 1 0-2zm17 0h1a1 1 0 1 1 0 2h-1a1 1 0 1 1 0-2zM5.64 4.22l.71.71a1 1 0 0 1-1.41 1.41l-.71-.71a1 1 0 1 1 1.41-1.41zm12.02 12.02.71.71a1 1 0 0 1-1.41 1.41l-.71-.71a1 1 0 1 1 1.41-1.41zM18.36 4.22a1 1 0 0 1 1.41 1.41l-.71.71a1 1 0 1 1-1.41-1.41l.71-.71zM5.64 16.24a1 1 0 0 1 1.41 1.41l-.71.71a1 1 0 0 1-1.41-1.41l.71-.71z"/>
+
+                            <path d="
+                                M12 18a6 6 0 1 0 0-12
+                                6 6 0 0 0 0 12z
+                            "/>
+
                         </svg>
 
                     </button>
 
+
+                    <!-- CONNEXION -->
 
                     <a
                         href="https://app.dalzonshule.com/"
@@ -1919,6 +1910,8 @@
             </nav>
 
 
+            <!-- MENU MOBILE -->
+
             <button
                 type="button"
                 class="mobile-menu"
@@ -1927,11 +1920,12 @@
                 aria-expanded="false"
             >
 
-                <svg
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                >
-                    <path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"/>
+                <svg viewBox="0 0 24 24">
+
+                    <path d="
+                        M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z
+                    "/>
+
                 </svg>
 
             </button>
@@ -1941,16 +1935,16 @@
     </header>
 
 
-    <!-- =========================================================
+    <!-- =====================================================
          MAIN
-    ========================================================= -->
+         ===================================================== -->
 
     <main>
 
 
-        <!-- =====================================================
+        <!-- =================================================
              HERO
-        ====================================================== -->
+             ================================================= -->
 
         <section
             class="hero"
@@ -1967,6 +1961,7 @@
             <div class="container">
 
                 <div class="hero-content reveal">
+
 
                     <div class="eyebrow">
 
@@ -2010,23 +2005,15 @@
                             href="https://app.dalzonshule.com/"
                             class="button button-primary"
                         >
-
                             Se connecter
-
-                            <span>
-                                →
-                            </span>
-
+                            <span>→</span>
                         </a>
-
 
                         <a
                             href="#vision"
                             class="button button-secondary"
                         >
-
                             Découvrir le projet
-
                         </a>
 
                     </div>
@@ -2046,7 +2033,6 @@
 
                         </div>
 
-
                         <div class="hero-stat">
 
                             <strong>
@@ -2058,7 +2044,6 @@
                             </span>
 
                         </div>
-
 
                         <div class="hero-stat">
 
@@ -2081,9 +2066,9 @@
         </section>
 
 
-        <!-- =====================================================
+        <!-- =================================================
              VISION
-        ====================================================== -->
+             ================================================= -->
 
         <section
             class="section"
@@ -2116,14 +2101,18 @@
                 <div class="cards">
 
 
-                    <!-- ELEVE -->
-
                     <article class="card reveal">
 
                         <div class="card-icon">
 
                             <svg viewBox="0 0 24 24">
-                                <path d="M12 3 2 8l10 5 8-4v6h2V8L12 3zm-6 9v4c0 2.2 2.7 4 6 4s6-1.8 6-4v-4l-6 3-6-3z"/>
+
+                                <path d="
+                                    M12 3 2 8l10 5 8-4v6h2V8L12 3zm-6
+                                    9v4c0 2.2 2.7 4 6 4s6-1.8 6-4v-4l-6
+                                    3-6-3z
+                                "/>
+
                             </svg>
 
                         </div>
@@ -2140,14 +2129,18 @@
                     </article>
 
 
-                    <!-- PARENTS -->
-
                     <article class="card reveal">
 
                         <div class="card-icon">
 
                             <svg viewBox="0 0 24 24">
-                                <path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10zM4 22a8 8 0 0 1 16 0H4z"/>
+
+                                <path d="
+                                    M12 12a5 5 0 1 0 0-10
+                                    5 5 0 0 0 0 10z
+                                    M4 22a8 8 0 0 1 16 0H4z
+                                "/>
+
                             </svg>
 
                         </div>
@@ -2164,14 +2157,17 @@
                     </article>
 
 
-                    <!-- ENSEIGNANTS -->
-
                     <article class="card reveal">
 
                         <div class="card-icon">
 
                             <svg viewBox="0 0 24 24">
-                                <path d="M4 4h16v12H4V4zm2 2v8h12V6H6zm-3 12h18v2H3v-2z"/>
+
+                                <path d="
+                                    M4 4h16v12H4V4zm2 2v8h12V6H6zm-3
+                                    12h18v2H3v-2z
+                                "/>
+
                             </svg>
 
                         </div>
@@ -2188,14 +2184,18 @@
                     </article>
 
 
-                    <!-- ECOLES -->
-
                     <article class="card reveal">
 
                         <div class="card-icon">
 
                             <svg viewBox="0 0 24 24">
-                                <path d="M3 21V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v16H3zm4-2h2v-4H7v4zm4 0h2V9h-2v10zm4 0h2v-7h-2v7z"/>
+
+                                <path d="
+                                    M3 21V5a2 2 0 0 1 2-2h14a2 2
+                                    0 0 1 2 2v16H3zm4-2h2v-4H7v4zm4
+                                    0h2V9h-2v10zm4 0h2v-7h-2v7z
+                                "/>
+
                             </svg>
 
                         </div>
@@ -2218,9 +2218,9 @@
         </section>
 
 
-        <!-- =====================================================
+        <!-- =================================================
              SERVICES
-        ====================================================== -->
+             ================================================= -->
 
         <section
             class="section"
@@ -2260,12 +2260,10 @@
                         </h3>
 
                         <p>
-
                             Dalzon Shule est construit autour
                             d'une expérience simple : permettre
                             à chaque utilisateur de trouver
                             rapidement l'espace qui lui correspond.
-
                         </p>
 
                     </div>
@@ -2273,8 +2271,6 @@
 
                     <div class="ecosystem-side reveal">
 
-
-                        <!-- INFO -->
 
                         <a
                             href="https://info.dalzonshule.com/"
@@ -2286,7 +2282,13 @@
                                 <div class="ecosystem-link-icon">
 
                                     <svg viewBox="0 0 24 24">
-                                        <path d="M11 17h2v-2h-2v2zm0-10v6h2V7h-2zm1-5a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16z"/>
+
+                                        <path d="
+                                            M11 17h2v-2h-2v2zm0-10v6h2V7h-2zm1-5
+                                            a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0
+                                            18a8 8 0 1 1 0-16 8 8 0 0 1 0 16z
+                                        "/>
+
                                     </svg>
 
                                 </div>
@@ -2312,8 +2314,6 @@
                         </a>
 
 
-                        <!-- APP -->
-
                         <a
                             href="https://app.dalzonshule.com/"
                             class="ecosystem-link"
@@ -2324,7 +2324,14 @@
                                 <div class="ecosystem-link-icon">
 
                                     <svg viewBox="0 0 24 24">
-                                        <path d="M17 8h-1V6a4 4 0 0 0-8 0v2H7a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2zm-7-2a2 2 0 0 1 4 0v2h-4V6z"/>
+
+                                        <path d="
+                                            M17 8h-1V6a4 4 0 0 0-8 0v2H7a2
+                                            2 0 0 0-2 2v9a2 2 0 0 0 2 2h10a2
+                                            2 0 0 0 2-2v-9a2 2 0 0 0-2-2zm-7-2
+                                            a2 2 0 0 1 4 0v2h-4V6z
+                                        "/>
+
                                     </svg>
 
                                 </div>
@@ -2350,8 +2357,6 @@
                         </a>
 
 
-                        <!-- SUPPORT -->
-
                         <a
                             href="https://support.dalzonshule.com/"
                             class="ecosystem-link"
@@ -2362,7 +2367,14 @@
                                 <div class="ecosystem-link-icon">
 
                                     <svg viewBox="0 0 24 24">
-                                        <path d="M12 2a10 10 0 0 0-10 10v5a3 3 0 0 0 3 3h2v-7H4v-1a8 8 0 0 1 16 0v1h-3v7h2a3 3 0 0 0 3-3v-5A10 10 0 0 0 12 2z"/>
+
+                                        <path d="
+                                            M12 2a10 10 0 0 0-10 10v5a3 3
+                                            0 0 0 3 3h2v-7H4v-1a8 8 0 0 1
+                                            16 0v1h-3v7h2a3 3 0 0 0 3-3v-5
+                                            A10 10 0 0 0 12 2z
+                                        "/>
+
                                     </svg>
 
                                 </div>
@@ -2388,8 +2400,6 @@
                         </a>
 
 
-                        <!-- CONDITIONS -->
-
                         <a
                             href="https://conditionsdutilisation.dalzonshule.com/"
                             class="ecosystem-link"
@@ -2400,7 +2410,13 @@
                                 <div class="ecosystem-link-icon">
 
                                     <svg viewBox="0 0 24 24">
-                                        <path d="M6 2h9l4 4v16H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm8 1.5V7h3.5L14 3.5zM8 11h8V9H8v2zm0 4h8v-2H8v2z"/>
+
+                                        <path d="
+                                            M6 2h9l4 4v16H6a2 2 0 0 1-2-2V4a2
+                                            2 0 0 1 2-2zm8 1.5V7h3.5L14 3.5z
+                                            M8 11h8V9H8v2zm0 4h8v-2H8v2z
+                                        "/>
+
                                     </svg>
 
                                 </div>
@@ -2434,9 +2450,9 @@
         </section>
 
 
-        <!-- =====================================================
+        <!-- =================================================
              APPLICATION
-        ====================================================== -->
+             ================================================= -->
 
         <section
             class="section"
@@ -2479,12 +2495,20 @@
                                 data-store="App Store"
                             >
 
-                                <svg
-                                    viewBox="0 0 24 24"
-                                    aria-hidden="true"
-                                >
+                                <svg viewBox="0 0 24 24">
 
-                                    <path d="M16.77 12.65c-.02-2.06 1.68-3.06 1.76-3.11-.96-1.4-2.46-1.59-2.99-1.61-1.27-.13-2.5.75-3.15.75-.66 0-1.68-.73-2.75-.71-1.41.02-2.71.82-3.43 2.08-1.48 2.57-.38 6.35 1.06 8.42.72 1.01 1.56 2.14 2.67 2.1 1.07-.04 1.48-.68 2.78-.68 1.3 0 1.67.68 2.8.65 1.16-.02 1.88-1.02 2.58-2.04.81-1.18 1.15-2.32 1.17-2.38-.03-.01-2.25-.86-2.27-3.47ZM14.7 6.58c.57-.7.95-1.67.84-2.64-.82.03-1.82.55-2.4 1.24-.52.6-.98 1.57-.86 2.49.91.07 1.84-.46 2.42-1.09Z"/>
+                                    <path d="
+                                        M16.77 12.65c-.02-2.06 1.68-3.06
+                                        1.76-3.11-.96-1.4-2.46-1.59-2.99-1.61
+                                        -1.27-.13-2.5.75-3.15.75-.66 0-1.68
+                                        -.73-2.75-.71-1.41.02-2.71.82-3.43
+                                        2.08-1.48 2.57-.38 6.35 1.06 8.42
+                                        .72 1.01 1.56 2.14 2.67 2.1 1.07
+                                        -.04 1.48-.68 2.78-.68 1.3 0 1.67
+                                        .68 2.8.65 1.16-.02 1.88-1.02
+                                        2.58-2.04.81-1.18 1.15-2.32
+                                        1.17-2.38-.03-.01-2.25-.86-2.27-3.47Z
+                                    "/>
 
                                 </svg>
 
@@ -2511,12 +2535,19 @@
                                 data-store="Google Play"
                             >
 
-                                <svg
-                                    viewBox="0 0 24 24"
-                                    aria-hidden="true"
-                                >
+                                <svg viewBox="0 0 24 24">
 
-                                    <path d="M3.3 2.6c-.2.35-.3.78-.3 1.28v16.24c0 .5.1.93.3 1.28L12.2 12 3.3 2.6Zm10.08 8.42L4.58 1.96c.23-.13.5-.2.79-.2.36 0 .69.1.98.27l10.36 5.9-3.33 3.09Zm0 1.96 3.33 3.09-10.36 5.9c-.29.17-.62.27-.98.27-.29 0-.56-.07-.79-.2l8.8-9.06Zm1.01-.98 3.72-3.46 1.34.76c.75.43 1.2 1.04 1.2 1.71 0 .67-.45 1.28-1.2 1.71l-1.34.76-3.72-3.48Z"/>
+                                    <path d="
+                                        M3.3 2.6c-.2.35-.3.78-.3 1.28v16.24c0
+                                        .5.1.93.3 1.28L12.2 12 3.3 2.6Zm10.08
+                                        8.42L4.58 1.96c.23-.13.5-.2.79-.2.36 0
+                                        .69.1.98.27l10.36 5.9-3.33 3.09Zm0
+                                        1.96 3.33 3.09-10.36 5.9c-.29.17-.62
+                                        .27-.98.27-.29 0-.56-.07-.79-.2l8.8
+                                        -9.06Zm1.01-.98 3.72-3.46 1.34.76c.75
+                                        .43 1.2 1.04 1.2 1.71 0 .67-.45 1.28
+                                        -1.2 1.71l-1.34.76-3.72-3.48Z
+                                    "/>
 
                                 </svg>
 
@@ -2547,9 +2578,9 @@
     </main>
 
 
-    <!-- =========================================================
+    <!-- =====================================================
          FOOTER
-    ========================================================= -->
+         ===================================================== -->
 
     <footer class="footer">
 
@@ -2558,6 +2589,10 @@
             <div class="footer-grid">
 
 
+                <!-- =================================================
+                     VRAI LOGO DU FOOTER
+                     ================================================= -->
+
                 <div>
 
                     <a
@@ -2565,9 +2600,11 @@
                         class="brand"
                     >
 
-                        <div class="brand-logo">
-                            DS
-                        </div>
+                        <img
+                            src="https://i.postimg.cc/1V66N19t/Chat-GPT-Image-4-aout-2026-09-22-33.png"
+                            alt="Logo DALZON SHULE"
+                            class="brand-logo-img"
+                        >
 
                         <div>
 
@@ -2593,6 +2630,8 @@
 
                 </div>
 
+
+                <!-- NAVIGATION -->
 
                 <div>
 
@@ -2630,6 +2669,8 @@
 
                 </div>
 
+
+                <!-- ESPACES -->
 
                 <div>
 
@@ -2682,9 +2723,9 @@
     </footer>
 
 
-    <!-- =========================================================
-         MODAL APP
-    ========================================================= -->
+    <!-- =====================================================
+         MODAL
+         ===================================================== -->
 
     <div
         class="modal"
@@ -2696,13 +2737,9 @@
             class="modal-box"
             role="dialog"
             aria-modal="true"
-            aria-labelledby="modalTitle"
         >
 
-            <h2
-                class="modal-title"
-                id="modalTitle"
-            >
+            <h2 class="modal-title">
                 Bientôt disponible
             </h2>
 
@@ -2727,9 +2764,9 @@
     </div>
 
 
-    <!-- =========================================================
+    <!-- =====================================================
          JAVASCRIPT
-    ========================================================= -->
+         ===================================================== -->
 
     <script>
 
@@ -2738,7 +2775,7 @@
 
         /* =====================================================
            ELEMENTS
-        ===================================================== */
+           ===================================================== */
 
         const body =
             document.body;
@@ -2772,18 +2809,22 @@
 
 
         /* =====================================================
-           HEADER SCROLL
-        ===================================================== */
+           HEADER AU SCROLL
+           ===================================================== */
 
         function updateHeader() {
 
             if (window.scrollY > 20) {
 
-                header.classList.add("scrolled");
+                header.classList.add(
+                    "scrolled"
+                );
 
             } else {
 
-                header.classList.remove("scrolled");
+                header.classList.remove(
+                    "scrolled"
+                );
 
             }
 
@@ -2792,26 +2833,30 @@
         window.addEventListener(
             "scroll",
             updateHeader,
-            { passive: true }
+            {
+                passive: true
+            }
         );
 
         updateHeader();
 
 
         /* =====================================================
-           MOBILE MENU
-        ===================================================== */
+           MENU MOBILE
+           ===================================================== */
 
         mobileMenu.addEventListener(
             "click",
-            () => {
+            function () {
 
-                const isOpen =
-                    nav.classList.toggle("open");
+                const opened =
+                    nav.classList.toggle(
+                        "open"
+                    );
 
                 mobileMenu.setAttribute(
                     "aria-expanded",
-                    String(isOpen)
+                    String(opened)
                 );
 
             }
@@ -2820,65 +2865,42 @@
 
         document
             .querySelectorAll(".nav-link")
-            .forEach(link => {
+            .forEach(
+                function (link) {
 
-                link.addEventListener(
-                    "click",
-                    () => {
+                    link.addEventListener(
+                        "click",
+                        function () {
 
-                        nav.classList.remove("open");
+                            nav.classList.remove(
+                                "open"
+                            );
 
-                        mobileMenu.setAttribute(
-                            "aria-expanded",
-                            "false"
-                        );
+                            mobileMenu.setAttribute(
+                                "aria-expanded",
+                                "false"
+                            );
 
-                    }
-                );
+                        }
+                    );
 
-            });
+                }
+            );
 
 
         /* =====================================================
-           THEME
-        ===================================================== */
+           MODE SOMBRE / CLAIR
+           ===================================================== */
 
-        const STORAGE_KEY =
+        const THEME_KEY =
             "dalzon-shule-theme";
 
 
-        function setTheme(theme) {
-
-            const isLight =
-                theme === "light";
-
-            body.classList.toggle(
-                "light",
-                isLight
-            );
-
-            localStorage.setItem(
-                STORAGE_KEY,
-                theme
-            );
-
-            themeColor.setAttribute(
-                "content",
-                isLight
-                    ? "#f5f8fc"
-                    : "#07111f"
-            );
-
-            updateThemeIcon(isLight);
-
-        }
-
-
-        function updateThemeIcon(isLight) {
+        function updateThemeIcon(
+            isLight
+        ) {
 
             if (isLight) {
-
-                /* Icône lune */
 
                 themeIcon.innerHTML = `
                     <path d="
@@ -2891,18 +2913,11 @@
                 `;
 
                 themeToggle.setAttribute(
-                    "aria-label",
-                    "Activer le mode sombre"
-                );
-
-                themeToggle.setAttribute(
                     "title",
                     "Mode sombre"
                 );
 
             } else {
-
-                /* Icône soleil */
 
                 themeIcon.innerHTML = `
                     <path d="
@@ -2914,25 +2929,8 @@
                         a1 1 0 0 1 1 1v1
                         a1 1 0 1 1-2 0v-1
                         a1 1 0 0 1 1-1z
-                        M3 11h1a1 1 0 1 1 0 2H3
-                        a1 1 0 1 1 0-2zm17 0h1
-                        a1 1 0 1 1 0 2h-1
-                        a1 1 0 1 1 0-2z
-                        M5.64 4.22l.71.71
-                        a1 1 0 0 1-1.41 1.41
-                        l-.71-.71
-                        a1 1 0 1 1 1.41-1.41z
-                        M18.36 16.24l.71.71
-                        a1 1 0 0 1-1.41 1.41
-                        l-.71-.71
-                        a1 1 0 1 1 1.41-1.41z
                     "/>
                 `;
-
-                themeToggle.setAttribute(
-                    "aria-label",
-                    "Activer le mode clair"
-                );
 
                 themeToggle.setAttribute(
                     "title",
@@ -2944,52 +2942,74 @@
         }
 
 
-        function getInitialTheme() {
+        function setTheme(
+            theme
+        ) {
 
-            const saved =
-                localStorage.getItem(STORAGE_KEY);
+            const light =
+                theme === "light";
 
-            if (
-                saved === "light" ||
-                saved === "dark"
-            ) {
-                return saved;
-            }
+            body.classList.toggle(
+                "light",
+                light
+            );
 
-            return window.matchMedia(
-                "(prefers-color-scheme: light)"
-            ).matches
-                ? "light"
-                : "dark";
+            localStorage.setItem(
+                THEME_KEY,
+                theme
+            );
+
+            themeColor.setAttribute(
+                "content",
+                light
+                    ? "#f5f8fc"
+                    : "#07111f"
+            );
+
+            updateThemeIcon(
+                light
+            );
+
         }
 
 
+        const savedTheme =
+            localStorage.getItem(
+                THEME_KEY
+            );
+
+
         setTheme(
-            getInitialTheme()
+            savedTheme === "light"
+                ? "light"
+                : "dark"
         );
 
 
         themeToggle.addEventListener(
             "click",
-            () => {
+            function () {
 
-                const next =
-                    body.classList.contains("light")
+                setTheme(
+                    body.classList.contains(
+                        "light"
+                    )
                         ? "dark"
-                        : "light";
-
-                setTheme(next);
+                        : "light"
+                );
 
             }
         );
 
 
         /* =====================================================
-           SCROLL REVEAL
-        ===================================================== */
+           ANIMATIONS AU SCROLL
+           ===================================================== */
 
         const revealElements =
-            document.querySelectorAll(".reveal");
+            document.querySelectorAll(
+                ".reveal"
+            );
 
 
         if (
@@ -2997,12 +3017,12 @@
             in window
         ) {
 
-            const revealObserver =
+            const observer =
                 new IntersectionObserver(
-                    entries => {
+                    function (entries) {
 
                         entries.forEach(
-                            entry => {
+                            function (entry) {
 
                                 if (
                                     entry.isIntersecting
@@ -3012,7 +3032,7 @@
                                         "visible"
                                     );
 
-                                    revealObserver.unobserve(
+                                    observer.unobserve(
                                         entry.target
                                     );
 
@@ -3029,9 +3049,9 @@
 
 
             revealElements.forEach(
-                element => {
+                function (element) {
 
-                    revealObserver.observe(
+                    observer.observe(
                         element
                     );
 
@@ -3041,7 +3061,7 @@
         } else {
 
             revealElements.forEach(
-                element => {
+                function (element) {
 
                     element.classList.add(
                         "visible"
@@ -3054,82 +3074,82 @@
 
 
         /* =====================================================
-           APP STORE MODAL
-        ===================================================== */
+           BOUTONS APP STORE / GOOGLE PLAY
+           ===================================================== */
 
-        const storeButtons =
-            document.querySelectorAll(
+        document
+            .querySelectorAll(
                 ".store-button"
+            )
+            .forEach(
+                function (button) {
+
+                    button.addEventListener(
+                        "click",
+                        function () {
+
+                            const store =
+                                button.dataset.store;
+
+                            modalText.textContent =
+                                "La version " +
+                                store +
+                                " de Dalzon Shule sera disponible " +
+                                "lorsque l'application sera officiellement publiée.";
+
+                            modal.classList.add(
+                                "open"
+                            );
+
+                            modal.setAttribute(
+                                "aria-hidden",
+                                "false"
+                            );
+
+                        }
+                    );
+
+                }
             );
 
 
-        function openModal(store) {
+        /* =====================================================
+           FERMER MODAL
+           ===================================================== */
 
-            modalText.textContent =
-                "La version " +
-                store +
-                " de Dalzon Shule sera disponible " +
-                "lorsque l'application sera officiellement publiée.";
+        modalClose.addEventListener(
+            "click",
+            function () {
 
-            modal.classList.add("open");
+                modal.classList.remove(
+                    "open"
+                );
 
-            modal.setAttribute(
-                "aria-hidden",
-                "false"
-            );
-
-            modalClose.focus();
-
-        }
-
-
-        function closeModal() {
-
-            modal.classList.remove(
-                "open"
-            );
-
-            modal.setAttribute(
-                "aria-hidden",
-                "true"
-            );
-
-        }
-
-
-        storeButtons.forEach(
-            button => {
-
-                button.addEventListener(
-                    "click",
-                    () => {
-
-                        openModal(
-                            button.dataset.store
-                        );
-
-                    }
+                modal.setAttribute(
+                    "aria-hidden",
+                    "true"
                 );
 
             }
         );
 
 
-        modalClose.addEventListener(
-            "click",
-            closeModal
-        );
-
-
         modal.addEventListener(
             "click",
-            event => {
+            function (event) {
 
                 if (
                     event.target === modal
                 ) {
 
-                    closeModal();
+                    modal.classList.remove(
+                        "open"
+                    );
+
+                    modal.setAttribute(
+                        "aria-hidden",
+                        "true"
+                    );
 
                 }
 
@@ -3139,43 +3159,19 @@
 
         document.addEventListener(
             "keydown",
-            event => {
+            function (event) {
 
                 if (
-                    event.key === "Escape" &&
-                    modal.classList.contains("open")
+                    event.key === "Escape"
                 ) {
 
-                    closeModal();
+                    modal.classList.remove(
+                        "open"
+                    );
 
-                }
-
-            }
-        );
-
-
-        /* =====================================================
-           CLOSE MOBILE MENU OUTSIDE
-        ===================================================== */
-
-        document.addEventListener(
-            "click",
-            event => {
-
-                const clickedInside =
-                    nav.contains(event.target) ||
-                    mobileMenu.contains(event.target);
-
-                if (
-                    !clickedInside &&
-                    nav.classList.contains("open")
-                ) {
-
-                    nav.classList.remove("open");
-
-                    mobileMenu.setAttribute(
-                        "aria-expanded",
-                        "false"
+                    modal.setAttribute(
+                        "aria-hidden",
+                        "true"
                     );
 
                 }
@@ -3185,73 +3181,36 @@
 
 
         /* =====================================================
-           HERO PARALLAX
-           Désactivé sur mobile et si l'utilisateur
-           préfère réduire les animations.
-        ===================================================== */
+           FERMER MENU EN DEHORS
+           ===================================================== */
 
-        const heroPhoto =
-            document.querySelector(".hero-photo");
+        document.addEventListener(
+            "click",
+            function (event) {
 
+                if (
+                    nav.classList.contains(
+                        "open"
+                    ) &&
+                    !nav.contains(
+                        event.target
+                    ) &&
+                    !mobileMenu.contains(
+                        event.target
+                    )
+                ) {
 
-        const reduceMotion =
-            window.matchMedia(
-                "(prefers-reduced-motion: reduce)"
-            ).matches;
+                    nav.classList.remove(
+                        "open"
+                    );
 
-
-        if (
-            !reduceMotion &&
-            window.innerWidth > 900
-        ) {
-
-            document.addEventListener(
-                "mousemove",
-                event => {
-
-                    const x =
-                        (event.clientX /
-                        window.innerWidth -
-                        .5) * 4;
-
-                    const y =
-                        (event.clientY /
-                        window.innerHeight -
-                        .5) * 3;
-
-                    heroPhoto.style.transform =
-                        `scale(1.035)
-                         translate(${x}px, ${y}px)`;
-
-                },
-                { passive: true }
-            );
-
-        }
-
-
-        /* =====================================================
-           PREVENT MODAL BODY SCROLL
-        ===================================================== */
-
-        const modalObserver =
-            new MutationObserver(
-                () => {
-
-                    body.style.overflow =
-                        modal.classList.contains("open")
-                            ? "hidden"
-                            : "";
+                    mobileMenu.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
 
                 }
-            );
 
-
-        modalObserver.observe(
-            modal,
-            {
-                attributes: true,
-                attributeFilter: ["class"]
             }
         );
 
