@@ -3216,5 +3216,73 @@
 
     </script>
 
+
+<!-- DALZON SHULE — PREMIUM DESIGN LAYER APPLIED TO THE PUBLISHED /docs SITE -->
+<style id="dalzon-live-premium-layer">
+:root{--blue:#3b82f6;--blue-light:#8dc0ff;--green:#35dfb0;--premium-line:rgba(148,183,230,.18)}
+html{scroll-padding-top:90px}
+body{background:#050b14;color:#f5f8fc}
+body:not(.light){background:radial-gradient(ellipse at 12% 8%,rgba(37,99,235,.15),transparent 34%),radial-gradient(ellipse at 88% 50%,rgba(34,211,160,.075),transparent 32%),#050b14}
+.site-background .background-grid{opacity:.075;background-size:62px 62px}
+.site-background .light-orb{opacity:.23;filter:blur(105px);animation:dalzonOrbDrift 18s ease-in-out infinite alternate}
+.orb-two{animation-delay:-8s!important}
+.header{transition:background .3s ease,border-color .3s ease,box-shadow .3s ease}
+.header.scrolled{background:rgba(5,11,20,.82);border-color:var(--premium-line);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);box-shadow:0 12px 42px rgba(0,0,0,.24)}
+body.light .header.scrolled{background:rgba(246,249,255,.9);border-color:rgba(20,45,80,.12)}
+.navbar{height:80px}
+.brand-logo-img{filter:drop-shadow(0 6px 18px rgba(59,130,246,.2));transition:transform .3s ease,filter .3s ease}
+.brand:hover .brand-logo-img{transform:translateY(-2px) scale(1.055);filter:drop-shadow(0 8px 24px rgba(59,130,246,.38))}
+.brand-name{font-size:15px;letter-spacing:1.65px}
+.brand-tagline{font-size:7.5px;letter-spacing:1.6px}
+.nav{gap:clamp(14px,2vw,27px)}
+.nav-link{font-size:12px;transition:color .2s ease,transform .2s ease}
+.nav-link::after{content:"";position:absolute;left:0;right:100%;bottom:-9px;height:2px;border-radius:2px;background:linear-gradient(90deg,#3b82f6,#35dfb0);transition:right .25s ease}
+.nav-link:hover{color:#fff;transform:translateY(-1px)}
+.nav-link:hover::after{right:0}
+body.light .nav-link:hover{color:#102039}
+.login-button,.button-primary{border:1px solid rgba(130,180,255,.35);background:linear-gradient(135deg,#347ff7,#1857d8);color:#fff;box-shadow:0 12px 30px rgba(37,99,235,.24);transition:transform .25s ease,box-shadow .25s ease,filter .25s ease}
+.login-button:hover,.button-primary:hover{transform:translateY(-3px);box-shadow:0 18px 38px rgba(37,99,235,.34);filter:brightness(1.07)}
+.button-secondary{border:1px solid rgba(112,165,245,.35);background:rgba(59,130,246,.07);backdrop-filter:blur(12px);transition:transform .25s ease,background .25s ease,border-color .25s ease}
+.button-secondary:hover{transform:translateY(-3px);background:rgba(59,130,246,.14);border-color:rgba(112,165,245,.65)}
+.hero{isolation:isolate;overflow:hidden;padding-top:clamp(135px,14vw,175px);padding-bottom:clamp(80px,10vw,125px)}
+.hero::after{content:"";position:absolute;z-index:-1;pointer-events:none;inset:auto -12% -36% 34%;height:70%;background:radial-gradient(ellipse,rgba(37,99,235,.13),transparent 67%);filter:blur(18px)}
+.hero-photo{filter:saturate(.86) contrast(1.04)}
+.hero-overlay{background:linear-gradient(90deg,rgba(5,11,20,.93) 0%,rgba(5,11,20,.78) 45%,rgba(5,11,20,.28) 100%)}
+.hero-glow{filter:blur(2px);opacity:.8}
+.hero-content{max-width:760px}
+.eyebrow{border:1px solid rgba(103,163,255,.27);background:rgba(59,130,246,.08);backdrop-filter:blur(12px);box-shadow:inset 0 1px 0 rgba(255,255,255,.04)}
+.status{box-shadow:0 0 0 5px rgba(53,223,176,.08),0 0 18px rgba(53,223,176,.35)}
+.hero-title{font-size:clamp(43px,6.5vw,82px);line-height:1.02;letter-spacing:-.06em;text-wrap:balance}
+.hero-title-accent{background:linear-gradient(100deg,#a8d0ff 0%,#5a9cff 48%,#56e6bd 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hero-description{max-width:660px;line-height:1.85}
+.hero-stat{border:1px solid rgba(148,183,230,.12);background:rgba(255,255,255,.025);backdrop-filter:blur(12px);border-radius:16px;padding:13px 17px}
+.section{position:relative}
+.section-header{max-width:760px}
+.section-label{color:#69a7ff;letter-spacing:2.1px}
+.section-title{letter-spacing:-.05em;text-wrap:balance}
+.cards{gap:22px}
+.card{position:relative;overflow:hidden;border:1px solid rgba(148,183,230,.14);border-radius:24px;background:linear-gradient(145deg,rgba(17,35,59,.78),rgba(8,18,32,.82));box-shadow:0 18px 45px rgba(0,0,0,.16);backdrop-filter:blur(16px);transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease}
+.card::before{content:"";position:absolute;left:0;right:0;top:0;height:2px;background:linear-gradient(90deg,transparent,#3b82f6,#35dfb0,transparent);opacity:0;transition:opacity .3s ease}
+.card:hover{transform:translateY(-7px);border-color:rgba(100,160,255,.38);box-shadow:0 28px 60px rgba(0,0,0,.26)}
+.card:hover::before{opacity:1}
+.card-icon{border:1px solid rgba(104,166,255,.16);background:linear-gradient(135deg,rgba(59,130,246,.17),rgba(53,223,176,.08));box-shadow:inset 0 1px 0 rgba(255,255,255,.06)}
+.ecosystem-main,.ecosystem-side{border:1px solid rgba(148,183,230,.15);border-radius:28px;background:linear-gradient(145deg,rgba(17,36,62,.84),rgba(7,17,31,.9));box-shadow:0 25px 70px rgba(0,0,0,.22);backdrop-filter:blur(18px);transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease}
+.ecosystem-main:hover,.ecosystem-side:hover{transform:translateY(-5px);border-color:rgba(100,160,255,.38);box-shadow:0 32px 78px rgba(0,0,0,.3)}
+.ecosystem-link{border:1px solid rgba(148,183,230,.12);border-radius:17px;background:rgba(255,255,255,.025);transition:background .25s ease,border-color .25s ease,transform .25s ease}
+.ecosystem-link:hover{background:rgba(59,130,246,.08);border-color:rgba(100,160,255,.28);transform:translateX(3px)}
+.ecosystem-link-icon{box-shadow:0 8px 22px rgba(0,0,0,.15)}
+.cta{position:relative;overflow:hidden;border:1px solid rgba(112,165,245,.2);border-radius:30px;background:radial-gradient(ellipse at 85% 15%,rgba(34,211,160,.13),transparent 35%),linear-gradient(135deg,#10294a,#091629 65%,#0b2030);box-shadow:0 30px 85px rgba(0,0,0,.25)}
+.cta::before{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(110deg,transparent 15%,rgba(255,255,255,.035) 50%,transparent 80%)}
+.store-button{border:1px solid rgba(148,183,230,.2);border-radius:18px;background:rgba(255,255,255,.04);transition:transform .25s ease,border-color .25s ease,background .25s ease;backdrop-filter:blur(12px)}
+.store-button:hover{transform:translateY(-4px);border-color:rgba(100,160,255,.42);background:rgba(59,130,246,.07)}
+.footer{border-top:1px solid rgba(148,183,230,.13);background:rgba(3,8,16,.6)}
+.footer-link{transition:color .2s ease,transform .2s ease}
+.footer-link:hover{color:#7db5ff;transform:translateX(2px)}
+@keyframes dalzonOrbDrift{0%{transform:translate3d(-12px,-8px,0) scale(.96)}100%{transform:translate3d(20px,18px,0) scale(1.06)}}
+@media(max-width:900px){.navbar{height:72px}.nav{gap:13px}.hero{padding-top:125px}.hero-title{font-size:clamp(40px,9vw,64px)}.hero-overlay{background:linear-gradient(180deg,rgba(5,11,20,.72),rgba(5,11,20,.9) 60%,rgba(5,11,20,.98))}.cards{gap:16px}}
+@media(max-width:620px){.navbar{height:68px}.brand-logo-img{width:38px;height:38px}.brand-name{font-size:13px}.brand-tagline{font-size:6px;letter-spacing:1px}.hero{padding-top:112px;padding-bottom:70px}.hero-title{font-size:clamp(38px,11vw,53px)}.hero-description{font-size:15px;line-height:1.75}.hero-bottom{gap:10px}.hero-stat{padding:11px 12px}.card{border-radius:20px}.ecosystem-main,.ecosystem-side{border-radius:22px}.cta{border-radius:23px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+</style>
+
 </body>
 </html>
